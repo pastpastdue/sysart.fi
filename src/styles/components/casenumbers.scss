@@ -1,0 +1,32 @@
+.case-numbers {
+    background-color: $color-bg-light;
+    padding: 2 * $grid-gutter-width 0;
+
+    .amount {
+        font-weight: bold;
+        display: block;
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .title {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        font-weight: lighter;
+    }
+
+    @media (max-width: $screen-sm-min) {
+      .case-number {
+        padding-bottom: $grid-gutter-width * 2;
+
+        &:first-child {
+            padding-top: $grid-gutter-width;
+        }
+      }
+
+      .amount {
+        line-height: 1.1;
+      }
+    }
+}

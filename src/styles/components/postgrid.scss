@@ -1,0 +1,32 @@
+.post-grid {
+  .post-grid-item {
+    position: relative;
+    padding-top: $grid-gutter-width/2;
+    padding-bottom: $grid-gutter-width/2;
+
+    .content-wrapper {
+      position: relative;
+      min-height: 250px;
+      height: 250px;
+    }
+
+    .title-wrapper {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .title {
+      margin: 0;
+      padding: 0;
+      color: white;
+      text-align: center;
+      width: 100%;
+      line-height: 1.5;
+
+      padding-left: $grid-gutter-width * 2;
+      padding-right: $grid-gutter-width * 2;
+    }
+  }
+}

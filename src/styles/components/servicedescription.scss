@@ -1,0 +1,9 @@
+.servicedescription {
+    padding-bottom: $grid-gutter-width * 5;
+
+    .description {
+        span {
+            font-weight: 200 !important; //something adds style tags to spans that wordpress gives us
+        }
+    }
+}

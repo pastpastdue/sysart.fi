@@ -1,0 +1,13 @@
+.minimal-clientlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: $grid-gutter-width / 2;
+
+    .client {
+        text-align: center;
+        max-width: 180px;
+        min-width: 120px;
+    }
+}

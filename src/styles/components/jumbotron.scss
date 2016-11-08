@@ -1,0 +1,28 @@
+.main-jumbotron {
+  position: relative;
+  min-height: 500px;
+  max-height: 70vh;
+
+  h1 {
+    font-size: 50pt;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .text-container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @media (max-width: $screen-sm-min) {
+    min-height: 250px;
+    h1 {
+      font-size: 20pt;
+    }
+  }
+
+  .jumbotron-excerpt-wrapper {
+    margin-top: 64px;
+  }
+
+}

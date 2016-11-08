@@ -1,0 +1,43 @@
+.fp-blocks {
+
+    //reset styles
+    .content-section {
+        padding: 0;
+    }
+
+    .preview-list {
+        margin: 0;
+    }
+
+    .fp-block {
+        padding-top: $grid-gutter-width * 4;
+        padding-bottom: $grid-gutter-width * 4;
+
+        &__jumbotron {
+            .text-container {
+                padding-top: 0;
+            }
+        }
+
+        &__header {
+            text-align: center;
+            text-transform: uppercase;
+            padding-bottom: $grid-gutter-width * 4;
+            margin: 0;
+            font-weight: 700;
+
+            * {
+                font-weight: bold;
+            }
+        }
+
+        &__services {
+            background-color: #efefef;
+        }
+
+        &__twitterfeed {
+            background-color: #efefef;
+            margin-bottom: -$grid-gutter-width * 4;
+        }
+    }
+}

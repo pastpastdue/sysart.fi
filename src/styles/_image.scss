@@ -1,0 +1,62 @@
+.image-container {
+  position: relative;
+
+  .image-inner-wrapper {
+    position: relative;
+    overflow: hidden;;
+
+    img{
+      max-width: 100%;
+      min-width: 100%;
+      transition: 0.5s;
+    }
+  }
+
+
+  &.loading {
+    .image-inner-wrapper img{
+      opacity: 0;
+    }
+  }
+}
+
+.image-square {
+  position: relative;
+
+  .background-image-container, .image-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 100%;
+  }
+}
+
+a:hover img, a:hover .background-image-container {
+  opacity: 0.8;
+}
+
+
+.background-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-size: cover;
+  background-position: center center;
+  transition: 0.5s;
+
+
+  &[data-src="null"] {
+    background-color: #eee;
+  }
+}
+
+.floater {
+  transition: 0.5s;
+  transition-property: opacity, box-shadow, color;
+}
+
+.floater:hover {
+  box-shadow: 5px 5px 30px 0px rgba(0,0,0, 0.1);
+}

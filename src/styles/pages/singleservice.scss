@@ -1,0 +1,16 @@
+.singleservice {
+    .title {
+        h1 {
+            float: left;
+        }
+    }
+
+    .fullwidthimage {
+        padding-top: 26%;
+
+        .background-image-container {
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}

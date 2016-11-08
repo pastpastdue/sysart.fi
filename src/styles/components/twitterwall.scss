@@ -1,0 +1,26 @@
+.twitterwall {
+    .tweet-container {
+        margin: 0 -$grid-gutter-width*0.5;
+    }
+
+    .tweet {
+        padding: 0 $grid-gutter-width*1.5 0 $grid-gutter-width*1.5;
+    }
+
+    .tweet__image {
+        max-width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: $color-bg-light;
+        margin-top: $grid-gutter-width;
+    }
+
+    .tweet__text {
+        border-bottom: 2px solid #d8d8d8;
+        padding: $grid-gutter-width 0;
+    }
+
+    .tweet__text--username, .tweet__text--hashtag {
+        color: $brand-primary;
+    }
+}

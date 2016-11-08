@@ -1,0 +1,44 @@
+{
+  "name": "sysart",
+  "version": "1.0.0",
+  "description": "sysart.fi",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "PROD_ENV=1 gulp build"
+  },
+  "keywords": [
+    "sysart"
+  ],
+  "author": "sysart",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-es2015-classes": "^6.18.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-babili": "0.0.5",
+    "babel-preset-es2015": "^6.18.0",
+    "cssnano": "^3.7.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-flatten": "^0.3.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.11.0",
+    "postcss": "^5.0.21",
+    "postcss-cli": "^2.5.2",
+    "webpack": "^1.13.2",
+    "webpack-stream": "^3.2.0"
+  }
+}

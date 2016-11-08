@@ -1,0 +1,44 @@
+.process {
+    padding: 0 50px;
+
+    .imagewrapper {
+        position: relative;
+        padding-top: 100%;
+        max-width: 300px;
+        margin: auto;
+
+        .background-image-container {
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .textcontent {
+        margin: auto -50px;
+    }
+
+    .title, .description {
+        display: block;
+        text-align: center;
+    }
+
+    // &:before {
+    //     content: ' ';
+    //     display: block;
+    //     position: absolute;
+    //     height: 50px;
+    //     width: 50px;
+    //     background-color: red;
+    //     top: 50%;
+    //     left: -25px;
+    //     margin-top: -25px;
+    // }
+    //
+    // &:first-child:before {
+    //     display: none;
+    // }
+
+    @media (max-width: $screen-md-min) {
+        margin-top: $grid-gutter-width * 2;
+    }
+}

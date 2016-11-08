@@ -1,0 +1,32 @@
+.content-section {
+  .title {
+    text-align: center;
+    padding-top: $grid-gutter-width;
+    padding-bottom: $grid-gutter-width;
+    font-weight: 700;
+
+    * {
+        font-weight: bold;
+    }
+  }
+
+  .bold-title {
+      text-align: left;
+      padding-top: $grid-gutter-width;
+      padding-bottom: $grid-gutter-width;
+      font-weight: bold;
+  }
+
+  .content {
+    line-height: 1.7;
+    font-weight: 200;
+
+    strong {
+        font-weight: 600;
+    }
+
+    h3 {
+        font-weight: 600;
+    }
+  }
+}

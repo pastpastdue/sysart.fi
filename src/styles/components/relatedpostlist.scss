@@ -1,0 +1,14 @@
+.relatedpostlist {
+    margin-top: $grid-gutter-width * 3;
+
+    .content-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    h2 {
+        font-weight: bold;
+        margin-bottom: $grid-gutter-width;
+    }
+}

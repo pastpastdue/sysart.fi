@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Campton';
+    font-weight: bold;
+    src: url('../fonts/Campton-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/Campton-Bold.otf')  format('opentype'),
+         url('../fonts/Campton-Bold.woff') format('woff'), url('../fonts/Campton-Bold.ttf')  format('truetype'), url('../fonts/Campton-Bold.svg#Campton-Bold') format('svg');
+}
+
+@font-face {
+    font-family: 'Campton';
+    font-weight: 300;
+    src: url('../fonts/Campton-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/Campton-Medium.otf')  format('opentype'),
+  	     url('../fonts/Campton-Medium.woff') format('woff'), url('../fonts/Campton-Medium.ttf')  format('truetype'), url('../fonts/Campton-Medium.svg#Campton-Medium') format('svg');
+}
+
+@font-face {
+    font-family: 'Campton';
+    font-weight: 200;
+    src: url('../fonts/Campton-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/Campton-Light.otf')  format('opentype'),
+  	     url('../fonts/Campton-Light.woff') format('woff'), url('../fonts/Campton-Light.ttf')  format('truetype'), url('../fonts/Campton-Light.svg#Campton-Light') format('svg');
+}
+
+@font-face {
+    font-family: 'Campton';
+    src: url('../fonts/Campton-Thin.eot?#iefix') format('embedded-opentype'),  url('../fonts/Campton-Thin.otf')  format('opentype'),
+  	     url('../fonts/Campton-Thin.woff') format('woff'), url('../fonts/Campton-Thin.ttf')  format('truetype'), url('../fonts/Campton-Thin.svg#Campton-Thin') format('svg');
+    font-weight: 100;
+
+}
+
+body, html {
+ font-family: 'Campton', sans-serif;
+ font-weight: 300;
+ color: $color-font-main;
+}
+
+h1 {
+ font-family: 'Campton', sans-serif;
+ font-weight: 700;
+}
+
+h2 {
+ font-family: 'Campton', sans-serif;
+}
+
+h3 {
+ font-family: 'Campton', sans-serif;
+ line-height: 1.6;
+ margin-top: 0.8em;
+}
+
+h4 {
+ font-family: 'Campton', sans-serif;
+ font-weight: 200;
+ line-height: 1.6;
+ margin-top: 0.8em;
+}
+
+h5 {
+  font-family: 'Campton', sans-serif;
+}
+
+h6 {
+ font-weight: 300;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+p {
+  font-weight: 200;
+  font-family: 'Campton', sans-serif;
+}
+
+p.light {
+  font-weight: 100;
+}
+
+a {
+  transition-duration: 0.3s;
+  transition-property: color;
+  color: $color-font-main;
+  text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: #f7944d;
+}
+
+.centered-title {
+    text-align: center;
+}
+
+
+.link {
+  color: #f7944d;
+}
+
+::selection {
+   background: #f7944d;
+   color: white;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
