@@ -1,8 +1,9 @@
-# Sysart
+# Sysart.fi site
 
-*insert text...*
+## Code of conduct
+- Every line of code is merged to master by making a pullrequest.
 
-# Development
+## Development
 Make sure you have installed docker (http://www.docker.com/products/docker)
 
 Inside the project run:
