@@ -163,7 +163,7 @@ function create_post_type() {
     )
   );
 
-  register_post_type( 'jobs',
+  register_post_type('job',
     array(
       'labels' => array(
         'name' => __( 'Jobs' ),
@@ -171,7 +171,8 @@ function create_post_type() {
       ),
       'public' => true,
       'has_archive' => true,
-			'taxonomies' => array('post_tag')
+      'supports' => array( 'title', 'excerpt', 'thumbnail', 'editor'),
+      'taxonomies' => array('post_tag')
     )
   );
 
