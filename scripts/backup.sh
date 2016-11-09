@@ -26,13 +26,16 @@ echo 'Copying files'
 cp -R /var/www/html \$DIR
 
 echo 'Dumping database'
-mysqldump -uroot --password=$REMOTE_PASS --databases sysart_wp > \$DIR/sysart.sql
+mysqldump -uroot --password=$REMOTE_PASS sysart_wp > \$DIR/sysart.sql
 
 echo 'Compressing'
 tar -zcf $BACKUP_FILE -C \$DIR .
 
 cd $BACKUPS_DIR
-rm \$(ls -t | awk 'NR>5')
+OLD_BACKUPS=\$(ls -t | awk 'NR>5')
+if [[ \$OLD_BACKUPS ]]; then
+  rm \$OLD_BACKUPS
+fi
 "
 
 echo "Created backup: $BACKUP_FILE"
