@@ -9,6 +9,9 @@ if [ "$#" -ne 4 ]; then
     exit
 fi
 
+SCRIPT_DIR=$( cd ${0%/*} && pwd -P )
+WP_DIR="$SCRIPT_DIR/../wp"
+
 REMOTE_URL=$1
 REMOTE_PASS=$2
 REPLACE_URL=$3
@@ -49,8 +52,8 @@ then
     rm ~/uploads.tar.gz
   "
 
-  rm -rf wp/wp-content/uploads
-  tar -zxf uploads.tar.gz -C wp/wp-content
+  rm -rf $WP_DIR/wp-content/uploads
+  tar -zxf uploads.tar.gz -C $WP_DIR/wp-content
   rm uploads.tar.gz
 fi
 
