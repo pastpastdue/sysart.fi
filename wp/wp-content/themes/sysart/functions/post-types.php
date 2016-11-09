@@ -1,0 +1,131 @@
+<?php
+add_action('init', function () {
+  register_post_type('blog',
+    array(
+      'labels' => array(
+        'name' => __('Blog posts'),
+        'singular_name' => __('Blog post'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'excerpt', 'thumbnail'),
+      'taxonomies' => array('post_tag'),
+    )
+  );
+
+  register_post_type('article',
+    array(
+      'labels' => array(
+        'name' => __('Articles'),
+        'singular_name' => __('Article'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'excerpt', 'thumbnail'),
+      'taxonomies' => array('post_tag'),
+    )
+  );
+
+  register_post_type('employee',
+    array(
+      'labels' => array(
+        'name' => __('Employees'),
+        'singular_name' => __('Employee'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'thumbnail'),
+      'taxonomies' => array('post_tag'),
+    )
+  );
+
+  register_post_type('news',
+    array(
+      'labels' => array(
+        'name' => __('News'),
+        'singular_name' => __('News'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'excerpt', 'thumbnail'),
+      'taxonomies' => array('post_tag'),
+    )
+  );
+
+  register_post_type('client',
+    array(
+      'labels' => array(
+        'name' => __('Clients'),
+        'singular_name' => __('Client'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'excerpt', 'thumbnail'),
+      'taxonomies' => array('post_tag'),
+    )
+  );
+
+  register_post_type('service',
+    array(
+      'labels' => array(
+        'name' => __('Services'),
+        'singular_name' => __('Service'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'excerpt', 'thumbnail'),
+      'taxonomies' => array('post_tag'),
+    )
+  );
+
+  register_post_type('jobs',
+    array(
+      'labels' => array(
+        'name' => __('Jobs'),
+        'singular_name' => __('Job'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'taxonomies' => array('post_tag'),
+    )
+  );
+
+  register_post_type('contactinfo',
+    array(
+      'labels' => array(
+        'name' => __('Contact Info'),
+        'singular_name' => __('Contact Info'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'excerpt', 'thumbnail', 'editor'),
+      'taxonomies' => array('post_tag'),
+    )
+  );
+
+  register_post_type('processes',
+    array(
+      'labels' => array(
+        'name' => __('Processes'),
+        'singular_name' => __('Process'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'editor'),
+      'taxonomies' => array('post_tag'),
+    )
+  );
+
+  register_post_type('keynumbers',
+    array(
+      'labels' => array(
+        'name' => __('Key numbers'),
+        'singular_name' => __('Key number'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array(),
+      'taxonomies' => array('post_tag'),
+    )
+  );
+});
