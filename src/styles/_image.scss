@@ -46,6 +46,10 @@ a:hover img, a:hover .background-image-container {
   background-position: center center;
   transition: 0.5s;
 
+  &.loading {
+    background-color: #eee;
+  }
+
 
   &[data-src="null"] {
     background-color: #eee;

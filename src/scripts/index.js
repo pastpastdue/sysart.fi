@@ -95,6 +95,19 @@ export default (function(window){
       img.src = imageObject ? imageObject.url : '';
     },
 
+    loadAllImages: function() {
+        var images = document.getElementsByClassName('js-image');
+        var backgroundImages = document.getElementsByClassName('js-background-image');
+
+        Array.prototype.map.call(images, function(imageElement) {
+            Site.loadImage(imageElement, (imageElement.dataset.square || false))
+        });
+
+        Array.prototype.map.call(backgroundImages, function(imageElement) {
+            Site.loadBackgroundImage(imageElement, (imageElement.dataset.square || false));
+        });
+    },
+
     /**
      * load image into an element
      * @param  {[type]} imageContainer [description]
