@@ -35,6 +35,10 @@ gulp.task('sass', () => {
     return gulp.src(paths.styles)
         .pipe(sass().on('error', sass.logError))
         .pipe(rename(paths.stylesName))
+        .pipe(autoprefixer({
+            browsers: ['last 4 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest(paths.stylesDest))
 });
 
@@ -53,10 +57,6 @@ gulp.task('sass:production', () => {
     return gulp.src(paths.styles)
         .pipe(sass().on('error', sass.logError))
         .pipe(rename(paths.stylesName))
-        .pipe(autoprefixer({
-            browsers: ['last 4 versions'],
-            cascade: false
-        }))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest(paths.stylesDest))
 });
