@@ -27,7 +27,7 @@
       height: 0px;
       padding-bottom: 57%;
 
-      @media (max-width: $screen-md-min) {
+      @include use-down('md') {
         min-height: 300px;
         padding-bottom: 0;
       }

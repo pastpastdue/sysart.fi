@@ -50,7 +50,7 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  @media (max-width: $screen-sm-min) {
+  @include use-down('sm') {
     padding-top: 16px;
     padding-bottom: 16px;
   }
@@ -159,7 +159,7 @@ td {
   }
 }
 
-@media (max-width: $screen-sm-min) {
+@include use-down('sm') {
   #wrapper {
     padding-left: $grid-gutter-width;
     padding-right: $grid-gutter-width;

@@ -8,8 +8,10 @@ nav {
   background-color: white;
   box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.9);
 
-  .admin-bar & {
-    top: 32px;
+  @include use-up('sm') {
+    .admin-bar & {
+      top: 32px;
+    }
   }
 
   .container {
@@ -21,7 +23,7 @@ nav {
     display: none;
   }
 
-  @media (min-width: $screen-sm + 1px) {
+  @include use-up('sm') {
     #menu-main-menu {
       height: auto !important;
     }
@@ -74,9 +76,7 @@ nav {
     }
   }
 
-
-
-  @media (max-width: $screen-sm-min) {
+  @include use-down('sm') {
     .menu-logo {
       padding: 0;
       width: 100%;

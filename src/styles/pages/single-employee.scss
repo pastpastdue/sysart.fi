@@ -12,13 +12,13 @@
     margin-top: 0;
   }
 
-  @media (min-width: $screen-md-min) {
+  @include use-up('md') {
     .person-image-container {
       float: right;
     }
   }
 
-  @media (max-width: $screen-md-min) {
+  @include use-down('md') {
     .person-title {
       margin-bottom: 32px;
 

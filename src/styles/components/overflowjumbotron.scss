@@ -5,7 +5,7 @@
     position: relative;
     height: 0px;
 
-    @media (max-width: $screen-sm) {
+    @include use-down('sm') {
       padding-top: 0;
       height: 250px;
     }
