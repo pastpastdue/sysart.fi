@@ -77,3 +77,9 @@
 
 $ionicons-font-path: "../fonts";
 @import './ionicons';
+
+@include use-down('sm') {
+  #wpadminbar {
+    display: none;
+  }
+}
