@@ -31,13 +31,11 @@
         </div>
     </div>
 
-    <div class="fp-block fp-block__services row">
+    <div class="fp-block fp-block__services">
         <div class="container">
             <div class="main-container">
                 <h2 class="fp-block__header">Palvelut</h2>
-                <div class="col-xs-12">
-                    <?php echo $servicelist; ?>
-                </div>
+                <?php echo $servicelist; ?>
             </div>
         </div>
     </div>
@@ -51,7 +49,7 @@
         </div>
     </div>
 
-    <div class="fp-block fp-block__twitterfeed row">
+    <div class="fp-block fp-block__twitterfeed">
         <div class="container">
             <div class="main-container">
                 <h2 class="fp-block__header">Twitter</h2>
