@@ -7,9 +7,12 @@ add_action('init', function () {
         'singular_name' => __('Blog post'),
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'supports' => array('title', 'excerpt', 'thumbnail'),
       'taxonomies' => array('post_tag'),
+      'rewrite' => array(
+        'slug' => 'blogi'
+      )
     )
   );
 
@@ -33,9 +36,12 @@ add_action('init', function () {
         'singular_name' => __('Employee'),
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'supports' => array('title', 'thumbnail'),
       'taxonomies' => array('post_tag'),
+      'rewrite' => array(
+        'slug' => 'tekijat'
+      )
     )
   );
 
@@ -59,9 +65,12 @@ add_action('init', function () {
         'singular_name' => __('Client'),
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'supports' => array('title', 'excerpt', 'thumbnail'),
       'taxonomies' => array('post_tag'),
+      'rewrite' => array(
+        'slug' => 'asiakkaat'
+      )
     )
   );
 
@@ -72,9 +81,12 @@ add_action('init', function () {
         'singular_name' => __('Service'),
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'supports' => array('title', 'excerpt', 'thumbnail'),
       'taxonomies' => array('post_tag'),
+      'rewrite' => array(
+        'slug' => 'palvelut'
+      )
     )
   );
 
@@ -85,9 +97,12 @@ add_action('init', function () {
         'singular_name' => __('Job'),
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'supports' => array( 'title', 'excerpt', 'thumbnail', 'editor'),
       'taxonomies' => array('post_tag'),
+      'rewrite' => array(
+        'slug' => 'tyopaikat'
+      )
     )
   );
 
