@@ -16,7 +16,7 @@
         font-weight: lighter;
     }
 
-    @media (max-width: $screen-sm-min) {
+    @include use-down('sm') {
       .case-number {
         padding-bottom: $grid-gutter-width * 2;
 

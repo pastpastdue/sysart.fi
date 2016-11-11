@@ -78,7 +78,7 @@ add_action('init', function () {
     )
   );
 
-  register_post_type('jobs',
+  register_post_type('job',
     array(
       'labels' => array(
         'name' => __('Jobs'),
@@ -86,6 +86,7 @@ add_action('init', function () {
       ),
       'public' => true,
       'has_archive' => true,
+      'supports' => array( 'title', 'excerpt', 'thumbnail', 'editor'),
       'taxonomies' => array('post_tag'),
     )
   );

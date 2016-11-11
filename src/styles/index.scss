@@ -37,7 +37,7 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 
-
+@import 'mixins';
 @import 'texts';
 @import 'layout';
 @import 'content-section';
@@ -65,7 +65,8 @@
 @import './components/postgrid';
 @import './components/pipedriveform';
 @import './components/twitterwall';
-
+@import './components/jobslist';
+@import './components/benefits';
 
 
 @import './pages/singleservice';
@@ -77,3 +78,9 @@
 
 $ionicons-font-path: "../fonts";
 @import './ionicons';
+
+@include use-down('sm') {
+  #wpadminbar {
+    display: none;
+  }
+}

@@ -220,4 +220,19 @@ class Utils {
 
       return $posts;
   }
+
+  public static function getJobsList() {
+    $args = array(
+      'orderby'          => 'menu_order',
+      'order'            => 'DESC',
+      'post_type'        => 'job',
+      'post_status'      => 'publish',
+      'suppress_filters' => true
+    );
+
+    $posts = get_posts($args);
+    self::postSort($posts);
+
+    return new JobsList($posts);
+  }
 }

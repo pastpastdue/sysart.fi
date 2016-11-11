@@ -38,7 +38,7 @@
     //     display: none;
     // }
 
-    @media (max-width: $screen-md-min) {
+    @include use-down('md') {
         margin-top: $grid-gutter-width * 2;
     }
 }

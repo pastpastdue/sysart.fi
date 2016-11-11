@@ -9,7 +9,7 @@ footer {
     font-weight: bold;
   }
 
-  @media (max-width: $screen-sm-min) {
+  @include use-down('sm') {
     text-align: center;
 
     .footer-component, .image-container, .copyright-info {
