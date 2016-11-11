@@ -6,7 +6,6 @@ const uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const flatten = require('gulp-flatten');
-const cleanCSS = require('gulp-clean-css');
 const del = require('del');
 const webpack = require('webpack-stream');
 
@@ -55,9 +54,14 @@ gulp.task('copy:fonts', () => {
 
 gulp.task('sass:production', () => {
     return gulp.src(paths.styles)
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+          outputStyle: 'compressed'
+        }).on('error', sass.logError))
         .pipe(rename(paths.stylesName))
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(autoprefixer({
+            browsers: ['last 4 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest(paths.stylesDest))
 });
 
