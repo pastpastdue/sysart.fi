@@ -185,7 +185,7 @@ $gutters: (
     margin-left: -$size;
     margin-right: -$size;
 
-    [class^="col-"] {
+    [class*="col-"] {
       padding-left: $size;
       padding-right: $size;
     }

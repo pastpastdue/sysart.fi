@@ -7,7 +7,7 @@ class JobsList {
   public function __toString() {
     /** @var WP_Post $job */
 
-    $content = '<div class="jobs-list">';
+    $content = '';
 
     foreach ($this->jobs as $job) {
       $link = get_permalink($job->ID);
@@ -24,8 +24,10 @@ class JobsList {
 EOC;
     }
 
-    $content .= '</div>';
-
-    return $content;
+    return <<<EOC
+      <div class="jobs-list">
+        $content
+      </div>
+EOC;
   }
 }

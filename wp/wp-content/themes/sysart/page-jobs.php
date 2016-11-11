@@ -1,11 +1,10 @@
 <?php
 /**
  * Template Name: Jobs
- *
  */
 
 get_header();
-$fields = get_fields();
+the_post();
 ?>
 <section class="content-block">
   <div class="row large-gutter">
@@ -14,17 +13,17 @@ $fields = get_fields();
     </div>
     <div class="col-sm-6 col-sm-pull-6 col-md-8 col-md-pull-4">
       <div class="content post-content">
-        <?php echo apply_filters('the_content', $post->post_content); ?>
+        <?php the_content(); ?>
       </div>
     </div>
   </div>
 </section>
 <section class="content-block">
-  <?php echo new Benefits($fields['benefits']); ?>
+  <?php echo new Benefits(get_field('benefits')); ?>
 </section>
 <section class="content-block">
   <div class="row text-center">
-    <h2><?php echo $fields['jobs_title']; ?></h2>
+    <h2><?php the_field('jobs_title'); ?></h2>
   </div>
   <?php echo Utils::getJobsList(); ?>
 </section>

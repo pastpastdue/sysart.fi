@@ -1,5 +1,6 @@
 <?php
 get_header();
+the_post();
 ?>
 <section class="content-block">
   <div class="row large-gutter">
@@ -8,8 +9,8 @@ get_header();
     </div>
     <div class="col-sm-6 col-sm-pull-6">
       <div class="content post-content">
-        <h1><?php echo $post->post_title; ?></h1>
-        <?php echo apply_filters('the_content', $post->post_content); ?>
+        <h1><?php the_title(); ?></h1>
+        <?php the_content(); ?>
       </div>
     </div>
   </div>

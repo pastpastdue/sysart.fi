@@ -5,7 +5,7 @@ class Benefits {
   }
 
   public function __toString() {
-    $content = '<div class="benefits">';
+    $content = '';
 
     foreach ($this->benefits as $benefit) {
       $image = wp_get_attachment_image($benefit['image'], null, false);
@@ -17,7 +17,10 @@ class Benefits {
 EOC;
     }
 
-    $content .= '</div>';
-    return $content;
+    return <<<EOC
+      <div class="benefits">
+        $content
+      </div>
+EOC;
   }
 }
