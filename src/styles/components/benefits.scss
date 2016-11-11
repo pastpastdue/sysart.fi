@@ -1,6 +1,7 @@
 .benefits {
   display: flex;
   flex-wrap: wrap;
+  margin: -$grid-gutter-width;
 
   .benefit {
     text-align: center;

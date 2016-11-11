@@ -56,6 +56,16 @@ body {
   }
 }
 
+.content-block {
+  margin-top: 64px;
+  margin-bottom: 64px;
+
+  @include use-down('sm') {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
 ul, li, ol {
   list-style-type: none;
 }
