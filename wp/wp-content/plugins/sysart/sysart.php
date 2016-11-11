@@ -6,10 +6,7 @@ Version: 0.1
 */
 
 add_action('admin_menu', function () {
-  $cap = 'manage_options';
-  $slug = 'sysart';
-
-  add_menu_page('Plugin Page', 'Sysart', $cap, $slug, function () {
+  add_menu_page('Plugin Page', 'Sysart', 'manage_options', 'sysart', function () {
     $data = base64_encode(json_encode(acf_get_local_field_groups()));
     $dataUri = 'data:application/json;base64,' . $data;
 
