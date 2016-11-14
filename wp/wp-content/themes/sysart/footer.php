@@ -39,8 +39,5 @@ $footerImage = new Image($fields['footer_image'], array('col-xs-12', 'col-sm-8 c
     echo new MainMenu('header-menu');
     wp_footer();
   ?>
-  <script>
-    window.Site.loadAllImages();
-  </script>
   </body>
 </html>

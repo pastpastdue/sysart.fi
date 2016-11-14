@@ -257,5 +257,6 @@ export default (function(window){
 
   window.addEventListener('DOMContentLoaded', function () {
     Site.parseLinks();
+    Site.loadAllImages();
   });
 })(window);
