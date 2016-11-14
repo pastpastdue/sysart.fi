@@ -83,11 +83,6 @@ class Image {
         <div class="image-inner-wrapper">
           <img data-size="auto" data-src="{$this->getImageUrls()}"/>
         </div>
-        <script type="text/javascript">
-          (function(Site) {
-            //Site.loadImage(document.currentScript ? document.currentScript.parentElement : document.getElementById('{$this->id}'), {$this->getSquareValue()});
-          })(Site);
-        </script>
       </div>
 EOT;
     } else {
