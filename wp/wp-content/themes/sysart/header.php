@@ -32,5 +32,4 @@ $fields = get_fields($frontpage->ID);
     ?>
   </head>
   <body <?php body_class(); ?>>
-    <div id="wrapper" class="container">
-      <div class="main-container">
+    <div class="container">

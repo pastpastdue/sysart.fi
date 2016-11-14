@@ -17,8 +17,8 @@
     $servicelist = Utils::getServicesList(null, null, array(), array('col-xs-12 fp-preview-list'),  array('col-xs-12','col-sm-6 col-lg-3'));
     $twitterwall = new Twitterwall();
 ?>
-    </div>
-</div> <!-- #wrapper-->
+
+</div> <!-- .container-->
 
 <div class="fp-blocks">
     <div class="fp-block fp-block__jumbotron">
