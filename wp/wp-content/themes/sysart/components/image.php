@@ -79,15 +79,10 @@ class Image {
     if ($this->imageData['id']) {
       return
 <<<EOT
-      <div class="image-container loading ${classNames}" id={$this->id}>
+      <div class="image-container loading js-image ${classNames}" id={$this->id} data-square="{$this->getSquareValue()}">
         <div class="image-inner-wrapper">
           <img data-size="auto" data-src="{$this->getImageUrls()}"/>
         </div>
-        <script type="text/javascript">
-          (function(Site) {
-            Site.loadImage(document.currentScript ? document.currentScript.parentElement : document.getElementById('{$this->id}'), {$this->getSquareValue()});
-          })(Site);
-        </script>
       </div>
 EOT;
     } else {

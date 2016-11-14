@@ -95,6 +95,21 @@ export default (function(window){
       img.src = imageObject ? imageObject.url : '';
     },
 
+    loadAllImages: function() {
+        var images = document.getElementsByClassName('js-image');
+        var backgroundImages = document.getElementsByClassName('js-background-image');
+
+        Array.prototype.map.call(images, function(imageElement) {
+            var isSquare = imageElement.getAttribute('data-square') || false;
+            Site.loadImage(imageElement, isSquare);
+        });
+
+        Array.prototype.map.call(backgroundImages, function(imageElement) {
+            var isSquare = imageElement.getAttribute('data-square') || false;
+            Site.loadBackgroundImage(imageElement, isSquare);
+        });
+    },
+
     /**
      * load image into an element
      * @param  {[type]} imageContainer [description]
@@ -244,5 +259,6 @@ export default (function(window){
 
   window.addEventListener('DOMContentLoaded', function () {
     Site.parseLinks();
+    Site.loadAllImages();
   });
 })(window);
