@@ -1,0 +1,2 @@
+<?php
+// Protection system activated
