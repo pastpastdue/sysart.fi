@@ -1,0 +1,71 @@
+{
+    "key": "group_58230956a5a36",
+    "title": "Services page",
+    "fields": [
+        {
+            "key": "field_57778197534bf",
+            "label": "services",
+            "name": "services",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "post_type": [
+                "service"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "max": "",
+            "min": 0,
+            "elements": [
+                "post_type"
+            ]
+        },
+        {
+            "key": "field_5800c620ae07f",
+            "label": "Pipedrive form ID",
+            "name": "pipedrive_form_id",
+            "type": "text",
+            "instructions": "Pipedrive lomakkeen ID. Lomakkeen luonnin yhteydess\u00e4 tulevasta urlista, ID osuus esim. \"https:\/\/pipedrivewebforms.com\/form\/127dbe1fb535cf55782b22fc6617ac5d\" ID on \"127dbe1fb535cf55782b22fc6617ac5d\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "html",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-services.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1479126125
+}
