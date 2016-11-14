@@ -50,3 +50,9 @@ Backs up live environment so that it can be restored with restore.sh
 Restores previously backed up live environment
 
     ./restore.sh
+
+### Debugging
+
+Add alias for your loopback device to make debugging work easier with xdebug:
+
+    sudo ifconfig en0 alias 10.254.254.254 255.255.255.0
