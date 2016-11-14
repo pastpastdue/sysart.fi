@@ -9,32 +9,31 @@ class MainMenu {
     $frontpage = get_post( get_option( 'page_on_front' ) );
     $fields = get_fields($frontpage->ID);
 
-    $this->logo = new Image($fields['logo'], array(), array('original'));
+    $this->logo = wp_get_attachment_image($fields['logo']['id']);
   }
 
   public function __toString() {
     $link = get_site_url();
 
+    $items = wp_nav_menu(array(
+      'menu' => $this->name,
+      'walker' => new MenuWalker(),
+      'echo' => false
+    ));
+
     $content = <<<EOT
-<nav class="main-menu" id="{$this->id}">
-  <div class="container">
-    <div class="menu-logo">
-      {$this->logo}
-      <a class="main-link" href="{$link}"></a>
-    </div>
-EOT;
-
-      $content .= wp_nav_menu(array(
-        'menu' => $this->name,
-        'walker' => new MenuWalker(),
-        'echo' => false
-      ));
-
-      $content .= <<<EOT
-    </div>
-    <div class="menu-burger">&#9776;</div>
-    <script type="text/javascript">(function(Site){ Site.initMenu(document.currentScript ? document.currentScript.parentElement : document.getElementById('{$this->id}')); })(Site);</script>
-  </nav>
+      <nav class="main-menu" id="{$this->id}">
+        <div class="container">
+          <div class="main-link">
+            <a href="{$link}">
+              {$this->logo}
+            </a>
+          </div>
+          $items
+        </div>
+        <div id="menu-burger">&#9776;</div>
+        <script type="text/javascript">(function(Site){ Site.initMenu(document.currentScript ? document.currentScript.parentElement : document.getElementById('{$this->id}'), document.getElementById('menu-burger')); })(Site);</script>
+      </nav>
 EOT;
 
     return $content;

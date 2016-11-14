@@ -207,9 +207,9 @@ export default (function(window){
       Site.menuState.open ? Site.closeMenu() : Site.openMenu();
     },
 
-    initMenu: function (element) {
+    initMenu: function (element, menuButton) {
       Site.menuState.element = element;
-      Site.menuState.element.addEventListener('click', function (event) { Site.toggleMenu(event); });
+      menuButton.addEventListener('click', function (event) { Site.toggleMenu(event); });
       Site.menuState.element.classList.add('menu-closed');
 
       Site.menuState.menuContainer = element.querySelector('#menu-main-menu');
