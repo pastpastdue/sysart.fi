@@ -100,11 +100,13 @@ export default (function(window){
         var backgroundImages = document.getElementsByClassName('js-background-image');
 
         Array.prototype.map.call(images, function(imageElement) {
-            Site.loadImage(imageElement, (imageElement.dataset.square || false))
+            var isSquare = imageElement.getAttribute('data-square') || false;
+            Site.loadImage(imageElement, isSquare);
         });
 
         Array.prototype.map.call(backgroundImages, function(imageElement) {
-            Site.loadBackgroundImage(imageElement, (imageElement.dataset.square || false));
+            var isSquare = imageElement.getAttribute('data-square') || false;
+            Site.loadBackgroundImage(imageElement, isSquare);
         });
     },
 
