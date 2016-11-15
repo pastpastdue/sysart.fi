@@ -11,29 +11,26 @@
  */
 get_header();
 
-$fields = get_fields();
-$post = get_post();
-
+the_post();
 ?>
     <section class="content-section post-content">
         <div class="content">
             <div class="bold-title">
-              <h1><?php echo $post->post_title; ?></h1>
+              <h1><?php the_title(); ?></h1>
+            </div>
+            <div class="row large-gutter">
+              <div class="col-xs-12 col-md-7 description">
+                <?php the_content(); ?>
+              </div>
+              <div class="col-xs-6 col-md-4 col-xs-offset-3 col-md-offset-0">
+                <?php echo new ReferenceWindow(get_field('reference'), get_field('reference_title'), get_field('reference_link')); ?>
+              </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                     <?php
 
-                    echo new ServiceDescription(apply_filters('the_content', $post->content), $fields['icon']);
-
-                    ?>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <?php
-
-                    echo new ProcessWalktrough($fields['processes']);
+                    echo new ProcessWalktrough(get_field('processes'));
 
                     ?>
                 </div>

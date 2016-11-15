@@ -20,6 +20,7 @@ class ProcessWalktrough {
 
       return
 <<<EOT
+    <h4 class="bold-title">Näin me toimimme:</h4>
     <div class="processwalktrough row">
         {$renderString}
     </div>

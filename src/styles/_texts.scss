@@ -85,7 +85,7 @@ a {
 
 a:hover, a:focus, a:active {
   text-decoration: none;
-  color: #f7944d;
+  color: $color-highlight;
 }
 
 .centered-title {
@@ -94,11 +94,11 @@ a:hover, a:focus, a:active {
 
 
 .link {
-  color: #f7944d;
+  color: $color-highlight;
 }
 
 ::selection {
-   background: #f7944d;
+   background: $color-highlight;
    color: white;
 }
 
