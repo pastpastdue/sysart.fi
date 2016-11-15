@@ -82,7 +82,7 @@ add_action('init', function () {
       ),
       'public' => true,
       'has_archive' => false,
-      'supports' => array('title', 'excerpt', 'thumbnail'),
+      'supports' => array('title', 'excerpt', 'thumbnail', 'editor'),
       'taxonomies' => array('post_tag'),
       'rewrite' => array(
         'slug' => 'palvelut'
