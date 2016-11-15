@@ -31,14 +31,14 @@ EOT;
     }
 
     return <<<EOT
-    <section class="content-section">
+    <div class="service-list">
       {$title}
       <div class="row">
         <div class="preview-list {$classNames}">
         {$list}
         </div>
       </div>
-    </section>
+    </div>
 EOT;
   }
 }

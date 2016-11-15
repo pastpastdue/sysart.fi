@@ -14,7 +14,7 @@
     $fields = get_fields();
     $jumbotron = new Jumbotron($fields);
     $clientslist = Utils::getClientsList($fields['clients'], '');
-    $servicelist = Utils::getServicesList(null, null, array(), array('col-xs-12 fp-preview-list'),  array('col-xs-12','col-sm-6 col-lg-3'));
+    $servicelist = Utils::getServicesList(null, null, array(), array('col-xs-12'),  array('col-xs-12','col-sm-6 col-lg-3'));
     $twitterwall = new Twitterwall();
 ?>
 
