@@ -1,16 +1,5 @@
-#wrapper {
-  position: relative;
-  max-width: $page-width;
-  margin: 0 auto;
-}
-
-.block {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
 $gutters: (
+  no: 0,
   large: 32px
 );
 
