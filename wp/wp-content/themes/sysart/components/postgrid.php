@@ -34,8 +34,8 @@ class PostGrid extends BaseObject {
         <a href="{$link}">
           <div class="content-wrapper">
             {$postImage}
-            <div class="title-wrapper" table>
-              <div class="title-content" table-cell>
+            <div class="title-wrapper">
+              <div class="title-content">
                 <h3 class="title">{$post->post_title}</h3>
               </div>
             </div>

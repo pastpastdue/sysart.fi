@@ -1,6 +1,4 @@
-    </div>
 <?php
-
 /**
  * do magic for footer components
  */
@@ -26,18 +24,14 @@ $footerImage = new Image($fields['footer_image'], array('col-xs-12', 'col-sm-8 c
 
 ?>
     <footer class="footer row">
-<?php
-  echo implode($footerComponents, '');
-  echo $footerImage;
-?>
-      <div class="text-center copyright-info col-xs-12">
-        <p class="copyright">&copy; Sysart Oy 2016</p>
+      <div class="container">
+        <?php echo implode($footerComponents, ''); ?>
+        <?php echo $footerImage; ?>
+        <div class="text-center copyright-info col-xs-12">
+          <p class="copyright">&copy; Sysart Oy 2016</p>
+        </div>
       </div>
     </footer>
-  </div>
-  <?php
-    echo new MainMenu('header-menu');
-    wp_footer();
-  ?>
+    <?php wp_footer(); ?>
   </body>
 </html>

@@ -14,35 +14,26 @@ get_header();
 $fields = get_fields();
 $post = get_post();
 
+$serviceDescription = new ServiceDescription(apply_filters('the_content', $post->content), $fields['icon']);
+$processWalktrough = new ProcessWalktrough($fields['processes']);
+$servicesList = Utils::getServicesList(false, '', array($post->ID));
+
 ?>
-    <section class="content-section post-content">
-        <div class="content">
-            <div class="bold-title">
-              <h1><?php echo $post->post_title; ?></h1>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <?php
+<div class="container">
+  <section class="content-section post-content">
+    <div class="content">
 
-                    echo new ServiceDescription(apply_filters('the_content', $post->content), $fields['icon']);
+      <section class="content-block">
+        <h1><?php echo $post->post_title; ?></h1>
+        <?php echo $serviceDescription; ?>
+      </section>
 
-                    ?>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <?php
+      <section class="content-block">
+        <?php echo $processWalktrough; ?>
+      </section>
 
-                    echo new ProcessWalktrough($fields['processes']);
-
-                    ?>
-                </div>
-            </div>
-            <?php
-
-            echo Utils::getServicesList(false, '', array($post->ID));
-
-            ?>
-        </div>
-    </section>
+      <?php echo $servicesList; ?>
+    </div>
+  </section>
+</div>
 <?php get_footer(); ?>

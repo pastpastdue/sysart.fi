@@ -12,20 +12,15 @@
 $fields = get_fields();
 
 get_header();
-
-
 ?>
-    <section class="content-section">
-      <div class="title">
-        <h1><?php echo $post->post_title; ?></h1>
-      </div>
-      <div class="content">
-<?php
-echo Utils::getPeople(null, array('displayPhonenumbers' => true));
-
-?>
-      </div>
-    </section>
-
-<?php
-get_footer();
+<div class="container">
+  <section class="content-section">
+    <div class="title">
+      <h1><?php echo $post->post_title; ?></h1>
+    </div>
+    <div class="content">
+      <?php echo Utils::getPeople(null, array('displayPhonenumbers' => true)); ?>
+    </div>
+  </section>
+</div>
+<?php get_footer(); ?>

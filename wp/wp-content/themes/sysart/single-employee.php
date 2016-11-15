@@ -26,7 +26,7 @@ foreach ($availableProjects as $projectId) {
 }
 
 ?>
-    <section class="content-section row relative single-person">
+    <section class="content-section row single-person">
 
       <div class="col-xs-12 col-md-8 person-title">
         <h1><?php echo $post->post_title; ?></h1>

@@ -20,25 +20,27 @@ $image = $fields['jumbotron_image'] ? $fields['jumbotron_image'] : $fields['imag
 
 ?>
 <?php echo new OverflowJumbotron($image, $fields['jumbotron_text']); ?>
-    <section class="content-section">
-      <div class="bold-title">
-        <h1><?php echo $post->post_title; ?></h1>
-      </div>
-      <div class="content post-content">
-        <?php echo $fields['content']; ?>
-      </div>
-        <?php
-          $p = $fields['author'] ? new PersonList(array('items' => $fields['author'])) : '';
-          echo $p;
-        ?>
+<div class="container">
+  <section class="content-section">
+    <div class="bold-title">
+      <h1><?php echo $post->post_title; ?></h1>
+    </div>
+    <div class="content post-content">
+      <?php echo $fields['content']; ?>
+    </div>
+      <?php
+        $p = $fields['author'] ? new PersonList(array('items' => $fields['author'])) : '';
+        echo $p;
+      ?>
 
-        <?php
+      <?php
 
-        $related = $fields['related_articles'] ? new RelatedPostList($fields['related_articles']) : '';
-        echo $related;
+      $related = $fields['related_articles'] ? new RelatedPostList($fields['related_articles']) : '';
+      echo $related;
 
-        ?>
-    </section>
+      ?>
+  </section>
+</div>
 <?php
     echo new AddThis();
     get_footer();

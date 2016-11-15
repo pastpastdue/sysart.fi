@@ -21,26 +21,27 @@ $image = $fields['jumbotron_image'] ? $fields['jumbotron_image'] : $fields['imag
 ?>
 <?php echo new OverflowJumbotron($image, $fields['jumbotron_text']); ?>
 <?php echo new CaseNumbers($fields['key_numbers']); ?>
-<section class="content-section">
-  <div class="bold-title">
-    <h1><?php echo $post->post_title; ?></h1>
-  </div>
-  <div class="content post-content">
-    <?php echo $fields['text']; ?>
-  </div>
-    <?php
-      $p = $fields['employees'] ? new PersonList(array('items' => $fields['employees'])) : '';
-      echo $p;
-    ?>
+<div class="container">
+  <section class="content-section">
+    <div class="bold-title">
+      <h1><?php echo $post->post_title; ?></h1>
+    </div>
+    <div class="content post-content">
+      <?php echo $fields['text']; ?>
+    </div>
+      <?php
+        $p = $fields['employees'] ? new PersonList(array('items' => $fields['employees'])) : '';
+        echo $p;
+      ?>
 
-    <?php
+      <?php
 
-      $related = $fields['related'] ? new RelatedPostList($fields['related']) : '';
-      echo $related;
+        $related = $fields['related'] ? new RelatedPostList($fields['related']) : '';
+        echo $related;
 
-    ?>
-</section>
-
+      ?>
+  </section>
+</div>
 <?php
     echo new AddThis();
     get_footer();

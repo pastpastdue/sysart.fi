@@ -27,8 +27,8 @@ class ServicePreview {
   <div class="service-preview preview-item floater {$classNames}">
     <div class="preview-item-inner-wrapper">
       <a href="{$link}">
-        <div table>
-          <div class="text-center" table-cell>
+        <div>
+          <div class="text-center">
               <div class="service-icon">
                 {$this->image}
               </div>
