@@ -29,7 +29,7 @@
 <div class="alt-bg-color">
     <div class="container">
         <section class="content-block">
-            <h2 class="">Palvelut</h2>
+            <h1 class="block-title">Palvelut</h1>
             <?php echo $servicelist; ?>
         </section>
     </div>
@@ -37,7 +37,7 @@
 
 <div class="container">
     <section class="content-block">
-        <h2 class="">Asiakkaat</h2>
+        <h1 class="block-title">Asiakkaat</h1>
         <?php echo $clientslist; ?>
     </section>
 </div>
@@ -45,7 +45,7 @@
 <div class="alt-bg-color">
     <div class="container">
         <section class="content-block">
-            <h2 class="">Twitter</h2>
+            <h1 class="block-title">Twitter</h1>
             <?php echo $twitterwall; ?>
         </section>
     </div>
