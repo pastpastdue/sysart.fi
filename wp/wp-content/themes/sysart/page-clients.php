@@ -17,26 +17,26 @@ $fields = get_fields();
 // $f = new FilterList($filters);
 
 ?>
-    <section class="content-section page-clients">
-      <div class="title">
-        <h1><?php echo $post->post_title; ?></h1>
+<div class="container">
+  <section class="content-section page-clients">
+    <div class="title">
+      <h1><?php echo $post->post_title; ?></h1>
+    </div>
+    <div class="content">
+      <?php
+      echo Utils::getClientsList(false, '', array(), false, false);
+      ?>
+      <div class="clientlist-wrapper">
+        <div class="title">
+          <h1>Muita asiakkaitamme</h1>
+        </div>
+        <?php
+        echo Utils::getMinimalClientList();
+        ?>
       </div>
-      <div class="content">
-          <?php //echo $f; ?>
-          <?php
-            echo Utils::getClientsList(false, '', array(), false, false);
-          ?>
-          <div class="clientlist-wrapper">
-              <div class="title">
-                  <h1>Muita asiakkaitamme</h1>
-              </div>
-              <?php
-                echo Utils::getMinimalClientList();
-              ?>
-           </div>
-      </div>
-    </section>
-
+    </div>
+  </section>
+</div>
 <?php
 get_footer();
 ?>

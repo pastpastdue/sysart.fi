@@ -32,4 +32,4 @@ $fields = get_fields($frontpage->ID);
     ?>
   </head>
   <body <?php body_class(); ?>>
-    <div class="container">
+    <?php echo new MainMenu('header-menu'); ?>

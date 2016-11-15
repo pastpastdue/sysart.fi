@@ -19,19 +19,21 @@ $processWalktrough = new ProcessWalktrough($fields['processes']);
 $servicesList = Utils::getServicesList(false, '', array($post->ID));
 
 ?>
-    <section class="content-section post-content">
-        <div class="content">
-            
-            <section class="content-block">
-                <h1><?php echo $post->post_title; ?></h1>
-                <?php echo $serviceDescription; ?>
-            </section>
+<div class="container">
+  <section class="content-section post-content">
+    <div class="content">
 
-            <section class="content-block">
-                <?php echo $processWalktrough; ?>
-            </section>
+      <section class="content-block">
+        <h1><?php echo $post->post_title; ?></h1>
+        <?php echo $serviceDescription; ?>
+      </section>
 
-            <?php echo $servicesList; ?>
-        </div>
-    </section>
+      <section class="content-block">
+        <?php echo $processWalktrough; ?>
+      </section>
+
+      <?php echo $servicesList; ?>
+    </div>
+  </section>
+</div>
 <?php get_footer(); ?>
