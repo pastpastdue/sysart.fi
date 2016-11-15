@@ -23,6 +23,7 @@ $footerComponents[] = new FooterComponent($currentComponent, array('col-xs-12','
 $footerImage = new Image($fields['footer_image'], array('col-xs-12', 'col-sm-8 col-sm-offset-2', 'col-md-offset-0 col-md-3'));
 
 ?>
+    </div><? // close wrapper ?>
     <footer class="footer row">
       <div class="container">
         <?php echo implode($footerComponents, ''); ?>

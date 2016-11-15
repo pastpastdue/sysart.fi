@@ -1,65 +1,13 @@
-body {
-  padding-top: $nav-bar-height + 32px;
-  overflow-x: hidden;
-}
-
-.clear {
-  clear: both;
-}
-
-.content-block {
-  margin-top: 64px;
-  margin-bottom: 64px;
-
-  @include use-down('sm') {
-    margin-top: 32px;
-    margin-bottom: 32px;
-  }
-}
-
-.alt-bg-color {
-    background-color: $color-bg-light;
-}
-
-ul, li, ol {
-  list-style-type: none;
-}
-
-.content-section {
-  ul {
-      margin: 20px auto;
-  }
-  ul, ol {
-    color: $brand-primary;
-
-    li {
-      list-style-type: disc;
-    }
-  }
-
-  h1,h2 {
-    font-weight: 600;
-  }
-}
-
-.text-container {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-[square] {
+#wrapper {
   position: relative;
-  height: 0;
-  padding-bottom: 100%;
+  max-width: $page-width;
+  margin: 0 auto;
+}
+
+.block {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 $gutters: (
