@@ -17,9 +17,11 @@ p {
 a {
   color: $color-brand;
   text-decoration: none;
+  transition: opacity 0.2s;
 
   &:hover, &:focus, &:active {
+    color: $color-brand;
     text-decoration: none;
-    color: lighten($color-brand, 20%);
+    opacity: 0.7;
   }
 }

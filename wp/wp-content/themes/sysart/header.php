@@ -33,4 +33,4 @@ $fields = get_fields($frontpage->ID);
   </head>
   <body <?php body_class(); ?>>
     <div id="wrapper">
-      <?php // echo new MainMenu('header-menu'); ?>
+      <?php echo new NavBar(); ?>
