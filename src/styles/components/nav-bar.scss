@@ -44,6 +44,12 @@
     text-transform: uppercase;
     color: $text-color-normal;
   }
+
+  .burger-button {
+    @include use-up('sm') {
+      display: none;
+    }
+  }
 }
 
 .nav-bar__wrapper {

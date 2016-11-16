@@ -153,13 +153,13 @@ export default (function(window){
      * @type {Object}
      */
     menuState: {
-      element: false,
-      menuContainer: false,
+      rootElement: false,
+      itemContainer: false,
       open: false
     },
 
     openMenu: function () {
-      var items = Site.menuState.menuContainer.children;
+      var items = Site.menuState.itemContainer.children;
       var height = items.length * 50;
       var itemDelay = 0;
       var itemBetweenDelay = 100;
@@ -174,14 +174,14 @@ export default (function(window){
         items[i].style['-ms-transition-delay'] = delay + 'ms';
       }
 
-      Site.menuState.menuContainer.style.height = height + 'px';
-      Site.menuState.element.classList.add('menu-open');
-      Site.menuState.element.classList.remove('menu-closed');
+      Site.menuState.itemContainer.style.height = height + 'px';
+      Site.menuState.rootElement.classList.add('menu-open');
+      Site.menuState.rootElement.classList.remove('menu-closed');
       Site.menuState.open = true;
     },
 
     closeMenu: function () {
-      var items = Site.menuState.menuContainer.children;
+      var items = Site.menuState.itemContainer.children;
       var height = items.length * 50;
 
       for (var i = 0; i < items.length; i++) {
@@ -192,13 +192,13 @@ export default (function(window){
         items[i].style['-ms-transition-delay'] = '';
       }
 
-      Site.menuState.menuContainer.style.height = height + 'px';
-      Site.menuState.element.classList.add('menu-closed');
-      Site.menuState.element.classList.remove('menu-open');
+      Site.menuState.itemContainer.style.height = height + 'px';
+      Site.menuState.rootElement.classList.add('menu-closed');
+      Site.menuState.rootElement.classList.remove('menu-open');
       Site.menuState.open = false;
 
       setTimeout(function() {
-        Site.menuState.menuContainer.style.height = '';
+        Site.menuState.itemContainer.style.height = '';
       }, 1);
     },
 
@@ -207,12 +207,11 @@ export default (function(window){
       Site.menuState.open ? Site.closeMenu() : Site.openMenu();
     },
 
-    initMenu: function (element, menuButton) {
-      Site.menuState.element = element;
+    initMenu: function (rootElement, menuButton, itemContainer) {
+      Site.menuState.rootElement = rootElement;
       menuButton.addEventListener('click', function (event) { Site.toggleMenu(event); });
-      Site.menuState.element.classList.add('menu-closed');
-
-      Site.menuState.menuContainer = element.querySelector('#menu-main-menu');
+      Site.menuState.rootElement.classList.add('menu-closed');
+      Site.menuState.itemContainer = itemContainer;
     },
 
     parsePhone: function (text) {
