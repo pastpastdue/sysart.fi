@@ -1,0 +1,15 @@
+@import 'bootstrap/mixins';
+
+.service-list {
+  .item:nth-child(1) {
+    @include gradient-vertical(#FF7F00, #EF6710);
+  }
+
+  .item:nth-child(2) {
+    @include gradient-vertical(#FCDB57, #FAA732);
+  }
+
+  .item:nth-child(3) {
+    @include gradient-vertical(#FB6600, #E14805);
+  }
+}

@@ -23,7 +23,10 @@ const paths = {
 
     nextStyles: 'src/styles-next/**/*.scss',
     nextStylesName: 'next-styles.min.css',
-    nextStylesIncludePaths: ['src/styles-next'],
+    nextStylesIncludePaths: [
+      'src/styles-next',
+      'node_modules/bootstrap-sass/assets/stylesheets'
+    ],
 
     fonts: 'src/fonts/**/*',
     fontsDest: 'wp/wp-content/themes/sysart/fonts'
