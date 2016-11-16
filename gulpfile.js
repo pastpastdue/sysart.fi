@@ -16,15 +16,11 @@ const paths = {
     scriptsDest: 'wp/wp-content/themes/sysart/scripts',
     scriptsLib: 'src/scripts/lib/**/*.js',
 
-    styles: 'src/styles/index.scss',
+    styles: 'src/styles/**/*.scss',
+    stylesName: 'styles.min.css',
     stylesDest: 'wp/wp-content/themes/sysart/styles',
-    stylesName: 'style.min.css',
-    stylesWatch: 'src/styles/**/*.scss',
-
-    nextStyles: 'src/styles-next/**/*.scss',
-    nextStylesName: 'next-styles.min.css',
-    nextStylesIncludePaths: [
-      'src/styles-next',
+    stylesIncludePaths: [
+      'src/styles',
       'node_modules/bootstrap-sass/assets/stylesheets'
     ],
 
@@ -40,25 +36,14 @@ gulp.task('scripts', () => {
 
 gulp.task('sass', () => {
     return gulp.src(paths.styles)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(rename(paths.stylesName))
-        .pipe(autoprefixer({
-            browsers: ['last 4 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest(paths.stylesDest))
-});
-
-gulp.task('sass-next', () => {
-    return gulp.src(paths.nextStyles)
         .pipe(sass({
-          includePaths: paths.nextStylesIncludePaths
+          includePaths: paths.stylesIncludePaths
         }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 4 versions'],
             cascade: false
         }))
-        .pipe(concat(paths.nextStylesName))
+        .pipe(concat(paths.stylesName))
         .pipe(gulp.dest(paths.stylesDest))
 });
 
@@ -94,8 +79,7 @@ gulp.task('clean:dist', () => {
 });
 
 gulp.task('sass:watch', () => {
-    gulp.watch(paths.stylesWatch, ['sass']);
-    gulp.watch(paths.nextStyles, ['sass-next']);
+    gulp.watch(paths.styles, ['sass']);
 });
 
 gulp.task('scripts:watch', () => {
@@ -103,7 +87,7 @@ gulp.task('scripts:watch', () => {
 });
 
 gulp.task('dev', ['clean:dist'], () => {
-    gulp.run('copy:libjs', 'copy:fonts', 'sass', 'sass-next', 'scripts', 'sass:watch', 'scripts:watch');
+    gulp.run('copy:libjs', 'copy:fonts', 'sass', 'scripts', 'sass:watch', 'scripts:watch');
 });
 
 gulp.task('build', ['clean:dist'], () => {

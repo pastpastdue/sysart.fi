@@ -1,35 +1,25 @@
 <?php
-/**
- * do magic for footer components
- */
-$frontpage = get_post( get_option( 'page_on_front' ) );
-$fields = get_fields($frontpage->ID);
-$footerLines = preg_split('/\r\n|\n|\r/', $fields['footer']);
-
-$footerComponents = array();
-$currentComponent = array();
-
-foreach ($footerLines as $key => $value) {
-  if (!empty($value)) {
-    $currentComponent[] = $value;
-  } else {
-    $footerComponents[] = new FooterComponent($currentComponent, array('col-xs-12','col-sm-6','col-md-3'));
-    $currentComponent = array();
-  }
-}
-
-$footerComponents[] = new FooterComponent($currentComponent, array('col-xs-12','col-md-3'));
-
-$footerImage = new Image($fields['footer_image'], array('col-xs-12', 'col-sm-8 col-sm-offset-2', 'col-md-offset-0 col-md-3'));
-
+setup_postdata(get_post(get_option('page_on_front')));
 ?>
     </div><? // close wrapper ?>
-    <footer class="footer row">
-      <div class="container">
-        <?php echo implode($footerComponents, ''); ?>
-        <?php echo $footerImage; ?>
-        <div class="text-center copyright-info col-xs-12">
-          <p class="copyright">&copy; Sysart Oy 2016</p>
+    <footer>
+      <div id="footer-wrapper">
+        <div class="block row no-gutter">
+          <?php while(have_rows('footer')): the_row(); ?>
+            <div class="item col-sm-3">
+              <div class="item__content">
+                <?php if (get_row_layout() == 'address'): ?>
+                  <div class="title title--small"><?php the_sub_field('title'); ?></div>
+                  <address><?php the_sub_field('text'); ?></address>
+                <?php else: ?>
+                  <?php echo wp_get_attachment_image(get_sub_field('image')); ?>
+                <?php endif; ?>
+              </div>
+            </div>
+          <?php endwhile; ?>
+          <div class="text-center copyright-info col-xs-12">
+            <p class="copyright">&copy; Sysart Oy 2016</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,0 +1,24 @@
+@import 'bootstrap/variables';
+
+$responsive-sizes: (
+  xs: $screen-xs-min $screen-xs-max,
+  sm: $screen-sm-min $screen-sm-max,
+  md: $screen-md-min $screen-md-max,
+  lg: $screen-lg-min 0
+);
+
+@mixin use-up($size) {
+  $sizes: map-get($responsive-sizes, $size);
+
+  @media (min-width: nth($sizes, 1)) {
+    @content;
+  }
+}
+
+@mixin use-down($size) {
+  $sizes: map-get($responsive-sizes, $size);
+
+  @media (max-width: nth($sizes, 1) - 1px) {
+    @content;
+  }
+}

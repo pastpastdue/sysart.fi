@@ -12,9 +12,22 @@
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  padding: 4em 2.5em 5.5em;
+  padding: 7em 2.5em 8em;
+}
+
+.block--light {
+  color: $text-color-normal;
 }
 
 .block--dark {
   color: $text-color-white;
+}
+
+.block--border {
+  border-top: $border-small;
+  border-bottom: $border-small;
+
+  + .block--border {
+    border-top: 0;
+  }
 }

@@ -1,0 +1,15 @@
+@import 'mixins';
+
+@include use-up('sm') {
+  .featured-clients-list {
+    .row:nth-child(even) {
+      > *:nth-child(1) {
+        left: 50%;
+      }
+
+      > *:nth-child(2) {
+        right: 50%;
+      }
+    }
+  }
+}

@@ -306,49 +306,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_57776dfa4838e",
-            "label": "footer",
-            "name": "footer",
-            "type": "textarea",
-            "instructions": "Taika-input jossa paljon taikoja\r\nr\u00e4j\u00e4ht\u00e4\u00e4 ihan varmasti jos s\u00f6ssit",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Helsinki\r\nIt\u00e4merenkatu 5\r\n00180 Helsinki\r\n040 123 1234\r\n\r\nOulu\r\nYrittipellontie 1D\r\n90230 Oulu\r\n040 123 1234\r\n\r\nASIAKASPALVELU SOPIMUSASIAKKAILLE\r\n+358 40 502 0671\r\nhelpdesk@sysart.fi",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 20,
-            "new_lines": ""
-        },
-        {
-            "key": "field_57776e894838f",
-            "label": "footer image",
-            "name": "footer_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "preview_size": "thumbnail",
-            "library": "all",
-            "return_format": "array",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": ""
-        },
-        {
             "key": "field_57c95a2f9ae61",
             "label": "meta description",
             "name": "meta_description",
@@ -387,6 +344,107 @@
             "append": "",
             "formatting": "none",
             "maxlength": ""
+        },
+        {
+            "key": "field_582c1a7e11fe8",
+            "label": "Footer",
+            "name": "footer",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Column",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "582c1a8580520",
+                    "name": "address",
+                    "label": "Address",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_582c1aa911fe9",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_582c1abb11fea",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
+                        }
+                    ],
+                    "min": "1",
+                    "max": "3"
+                },
+                {
+                    "key": "582c1aee11feb",
+                    "name": "image",
+                    "label": "Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_582c1af411fec",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -415,5 +473,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1479278621
+    "modified": 1479285719
 }

@@ -1,7 +1,7 @@
 @import 'variables';
 
 .title {
-  color: red;
+
 }
 
 .title--highlight {
@@ -12,7 +12,15 @@
 }
 
 .title--medium {
-  color: $text-color-normal;
   font-weight: 600;
   font-size: 36px;
+}
+
+.title--small {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.title--light {
+  color: $text-color-white;
 }

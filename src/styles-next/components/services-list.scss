@@ -1,6 +1,6 @@
 @import 'bootstrap/mixins';
 
-.service-list {
+.services-list {
   .item:nth-child(1) {
     @include gradient-vertical(#FF7F00, #EF6710);
   }

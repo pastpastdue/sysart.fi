@@ -5,9 +5,10 @@
 
 $jumbotron_bg = StyleInjector::addBackground(get_field('jumbotron_image'));
 
-get_header();
+$service_list = new ServicesList(get_field('services'));
+$featured_clients_list = new FeaturedClientsList(get_field('clients'));
 
-$service_list = new ServiceList(get_field('services'));
+get_header();
 ?>
 <div class="hero block <?php echo $jumbotron_bg; ?>">
   <div class="block__content">
@@ -29,5 +30,5 @@ $service_list = new ServiceList(get_field('services'));
     <p>Me autamme uusien digitaalisten palveluiden luomisessa, vanhojen järjestelmien modernisoinnissa sekä järjestelmäintegraatioissa.</p>
   </div>
 </div>
-
+<?php echo $featured_clients_list; ?>
 <?php get_footer(); ?>
