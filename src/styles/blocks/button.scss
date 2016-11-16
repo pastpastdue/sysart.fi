@@ -1,9 +1,17 @@
 @import 'variables';
 
 .button {
+  $hover-color: lighten($color-brand, 20%);
+
   color: $color-brand;
   border: 1px solid $color-brand;
   padding: 1em 2em;
   text-transform: uppercase;
   display: inline-block;
+  transition: 0.2s all;
+
+  &:hover {
+    border: 1px solid $hover-color;
+    color: $hover-color;
+  }
 }

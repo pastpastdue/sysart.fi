@@ -16,7 +16,7 @@ get_header();
   </div>
 </div>
 <div class="block">
-  <div class="block__content">
+  <div class="block__content text-block">
     <h2 class="title title--highlight">Palvelumme</h2>
     <p class="title title--medium">Kasvatetaan liiketoimintaasi digitaalisilla palveluilla</p>
     <p>Me autamme uusien digitaalisten palveluiden luomisessa, vanhojen järjestelmien modernisoinnissa sekä järjestelmäintegraatioissa.</p>
@@ -24,10 +24,15 @@ get_header();
 </div>
 <?php echo $service_list; ?>
 <div class="block">
-  <div class="block__content">
+  <div class="block__content text-block">
     <h2 class="title title--highlight">Toimintatapamme</h2>
     <p class="title title--medium">Olemme poistaneet häsläyksen ohjelmistokehityksestä.</p>
     <p>Me autamme uusien digitaalisten palveluiden luomisessa, vanhojen järjestelmien modernisoinnissa sekä järjestelmäintegraatioissa.</p>
+    <div>
+      <a href="http://www.google.fi" class="button">
+        Lue lisää toimitavoista ja sopimusmalleista
+      </a>
+    </div>
   </div>
 </div>
 <?php echo $featured_clients_list; ?>
