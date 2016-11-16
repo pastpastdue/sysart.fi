@@ -1,5 +1,5 @@
 <?php
-define('BUILD_STAMP', filemtime(__DIR__ . '/styles/style.min.css'));
+define('BUILD_STAMP', filemtime(__DIR__ . '/styles/styles.min.css'));
 
 foreach (glob(__DIR__ . '/functions/*.php') as $file) {
   include $file;

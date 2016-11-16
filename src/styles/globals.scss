@@ -5,3 +5,23 @@
   max-width: $width-page;
   margin: 0 auto;
 }
+
+html, body {
+  font-size: 16px;
+}
+
+p {
+  font-weight: 200;
+}
+
+a {
+  transition-duration: 0.3s;
+  transition-property: color;
+  color: $color-brand;
+  text-decoration: none;
+
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    color: lighten($color-brand, 20%);
+  }
+}
