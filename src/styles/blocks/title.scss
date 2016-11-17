@@ -1,0 +1,35 @@
+@import 'mixins';
+@import 'variables';
+
+.title {
+
+}
+
+.title--highlight {
+  text-transform: uppercase;
+  color: $color-brand;
+  font-size: 20px;
+  font-weight: 600;
+
+  @include use-down('sm') {
+    font-size: 16px;
+  }
+}
+
+.title--medium {
+  font-weight: 600;
+  font-size: 36px;
+
+  @include use-down('sm') {
+    font-size: 24px;
+  }
+}
+
+.title--small {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.title--light {
+  color: $text-color-white;
+}

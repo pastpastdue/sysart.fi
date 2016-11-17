@@ -1,10 +1,26 @@
 {
     "key": "group_582309564e3c5",
-    "title": "MainPage",
+    "title": "Main page",
     "fields": [
         {
+            "key": "field_582d8b3243407",
+            "label": "Header",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_57775a56a0933",
-            "label": "logo",
+            "label": "Logo",
             "name": "logo",
             "type": "image",
             "instructions": "top menu logo",
@@ -15,21 +31,21 @@
                 "class": "",
                 "id": ""
             },
+            "return_format": "id",
             "preview_size": "thumbnail",
             "library": "all",
-            "return_format": "array",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
             "mime_types": ""
         },
         {
-            "key": "field_5773fcaeb3092",
-            "label": "jumbotron image",
-            "name": "jumbotron_image",
+            "key": "field_582c45ef11354",
+            "label": "Hero image",
+            "name": "hero_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -39,21 +55,56 @@
                 "class": "",
                 "id": ""
             },
+            "return_format": "id",
             "preview_size": "thumbnail",
             "library": "all",
-            "return_format": "array",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
             "mime_types": ""
         },
         {
             "key": "field_5773fca0b3091",
-            "label": "jumbotron text",
-            "name": "jumbotron_text",
+            "label": "Hero text",
+            "name": "hero_text",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_582d8b4a43408",
+            "label": "Services",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_582d8ba63fd44",
+            "label": "Services title",
+            "name": "services_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -67,51 +118,12 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": ""
         },
         {
-            "key": "field_57dd851774713",
-            "label": "jumbotron excerpt",
-            "name": "jumbotron_excerpt",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "br"
-        },
-        {
-            "key": "field_577773bbc0971",
-            "label": "jumbotron link",
-            "name": "jumbotron_link",
-            "type": "page_link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "taxonomy": [],
-            "allow_archives": 1
-        },
-        {
-            "key": "field_5773e38d07c4c",
-            "label": "main title",
-            "name": "main_title",
+            "key": "field_582d8bb23fd45",
+            "label": "Services subtitle",
+            "name": "services_subtitle",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -125,14 +137,13 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": ""
         },
         {
-            "key": "field_5773e3ab07c4d",
-            "label": "image",
-            "name": "image",
-            "type": "image",
+            "key": "field_582d8bbb3fd46",
+            "label": "Services text",
+            "name": "services_text",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -141,20 +152,15 @@
                 "class": "",
                 "id": ""
             },
-            "preview_size": "thumbnail",
-            "library": "all",
-            "return_format": "array",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5768e900863c3",
-            "label": "services",
+            "label": "Services",
             "name": "services",
             "type": "relationship",
             "instructions": "",
@@ -165,7 +171,6 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
             "post_type": [
                 "service"
             ],
@@ -173,17 +178,89 @@
             "filters": [
                 "search"
             ],
+            "elements": "",
+            "min": "",
             "max": "",
-            "min": 0,
-            "elements": [
-                "post_type"
-            ]
+            "return_format": "id"
         },
         {
-            "key": "field_57cd44e0dd40c",
-            "label": "hilights",
-            "name": "hilights",
-            "type": "relationship",
+            "key": "field_582d8bd03fd47",
+            "label": "Other",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_582d8c71c6f31",
+            "label": "Block title",
+            "name": "block_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_582d8f6fc6f32",
+            "label": "Block subtitle",
+            "name": "block_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_582d8f79c6f33",
+            "label": "Block text",
+            "name": "block_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_582d8f82c6f34",
+            "label": "Block image",
+            "name": "block_image",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -193,30 +270,57 @@
                 "id": ""
             },
             "return_format": "id",
-            "post_type": [
-                "post",
-                "page",
-                "blog",
-                "article",
-                "employee",
-                "news",
-                "client",
-                "service",
-                "jobs"
-            ],
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_582d8f92c6f35",
+            "label": "Block link",
+            "name": "block_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
             "taxonomy": [],
-            "filters": [
-                "search"
-            ],
-            "max": "",
-            "min": 0,
-            "elements": [
-                "post_type"
-            ]
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_582d905060343",
+            "label": "Block link text",
+            "name": "block_link_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5768e885863c2",
-            "label": "Clients",
+            "label": "Featured clients",
             "name": "clients",
             "type": "relationship",
             "instructions": "",
@@ -227,7 +331,6 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
             "post_type": [
                 "client"
             ],
@@ -235,17 +338,16 @@
             "filters": [
                 "search"
             ],
+            "elements": "",
+            "min": "",
             "max": "",
-            "min": 0,
-            "elements": [
-                "post_type"
-            ]
+            "return_format": "id"
         },
         {
-            "key": "field_5773e3fa07c4e",
-            "label": "share title",
-            "name": "share_title",
-            "type": "text",
+            "key": "field_582d8b6143409",
+            "label": "Footer",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -254,139 +356,109 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "formatting": "html",
-            "maxlength": ""
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "key": "field_5773e40507c4f",
-            "label": "share image",
-            "name": "share_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "preview_size": "thumbnail",
-            "library": "all",
-            "return_format": "array",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": ""
-        },
-        {
-            "key": "field_5773e41307c50",
-            "label": "share text",
-            "name": "share_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "formatting": "html",
-            "maxlength": ""
-        },
-        {
-            "key": "field_57776dfa4838e",
-            "label": "footer",
+            "key": "field_582c1a7e11fe8",
+            "label": "Footer",
             "name": "footer",
-            "type": "textarea",
-            "instructions": "Taika-input jossa paljon taikoja\r\nr\u00e4j\u00e4ht\u00e4\u00e4 ihan varmasti jos s\u00f6ssit",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Helsinki\r\nIt\u00e4merenkatu 5\r\n00180 Helsinki\r\n040 123 1234\r\n\r\nOulu\r\nYrittipellontie 1D\r\n90230 Oulu\r\n040 123 1234\r\n\r\nASIAKASPALVELU SOPIMUSASIAKKAILLE\r\n+358 40 502 0671\r\nhelpdesk@sysart.fi",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 20,
-            "new_lines": ""
-        },
-        {
-            "key": "field_57776e894838f",
-            "label": "footer image",
-            "name": "footer_image",
-            "type": "image",
+            "type": "flexible_content",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "preview_size": "thumbnail",
-            "library": "all",
-            "return_format": "array",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": ""
-        },
-        {
-            "key": "field_57c95a2f9ae61",
-            "label": "meta description",
-            "name": "meta_description",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "formatting": "none",
-            "maxlength": ""
-        },
-        {
-            "key": "field_57c95a3e9ae62",
-            "label": "meta keywords",
-            "name": "meta_keywords",
-            "type": "text",
-            "instructions": "comma separated list as kissa, koira, kala, jorma",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "formatting": "none",
-            "maxlength": ""
+            "button_label": "Add Column",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "582c1a8580520",
+                    "name": "address",
+                    "label": "Address",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_582c1aa911fe9",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_582c1abb11fea",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
+                        }
+                    ],
+                    "min": "1",
+                    "max": "3"
+                },
+                {
+                    "key": "582c1aee11feb",
+                    "name": "image",
+                    "label": "Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_582c1af411fec",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -415,5 +487,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1479126146
+    "modified": 1479381087
 }

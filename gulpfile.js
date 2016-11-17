@@ -8,6 +8,7 @@ const rename = require('gulp-rename');
 const flatten = require('gulp-flatten');
 const del = require('del');
 const webpack = require('webpack-stream');
+const concat = require('gulp-concat');
 
 const paths = {
     scripts: 'src/scripts/**/*.js',
@@ -15,10 +16,13 @@ const paths = {
     scriptsDest: 'wp/wp-content/themes/sysart/scripts',
     scriptsLib: 'src/scripts/lib/**/*.js',
 
-    styles: 'src/styles/index.scss',
+    styles: 'src/styles/**/*.scss',
+    stylesName: 'styles.min.css',
     stylesDest: 'wp/wp-content/themes/sysart/styles',
-    stylesName: 'style.min.css',
-    stylesWatch: 'src/styles/**/*.scss',
+    stylesIncludePaths: [
+      'src/styles',
+      'node_modules/bootstrap-sass/assets/stylesheets'
+    ],
 
     fonts: 'src/fonts/**/*',
     fontsDest: 'wp/wp-content/themes/sysart/fonts'
@@ -32,12 +36,14 @@ gulp.task('scripts', () => {
 
 gulp.task('sass', () => {
     return gulp.src(paths.styles)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(rename(paths.stylesName))
+        .pipe(sass({
+          includePaths: paths.stylesIncludePaths
+        }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 4 versions'],
             cascade: false
         }))
+        .pipe(concat(paths.stylesName))
         .pipe(gulp.dest(paths.stylesDest))
 });
 
@@ -73,7 +79,7 @@ gulp.task('clean:dist', () => {
 });
 
 gulp.task('sass:watch', () => {
-    gulp.watch(paths.stylesWatch, ['sass']);
+    gulp.watch(paths.styles, ['sass']);
 });
 
 gulp.task('scripts:watch', () => {

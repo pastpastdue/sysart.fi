@@ -1,54 +1,42 @@
 <?php
-    /**
-     * Template Name: MainPage
-     *
-     *
-     * @link https://codex.wordpress.org/Template_Hierarchy
-     *
-     * @package WordPress
-     * @subpackage sysart
-     * @since sysart
-     */
-    get_header();
+/**
+ * Template Name: MainPage
+ */
 
-    $fields = get_fields();
-    $jumbotron = new Jumbotron($fields);
-    $clientslist = Utils::getClientsList($fields['clients'], '');
-    $servicelist = Utils::getServicesList(null, null, array(), array('col-xs-12'),  array('col-xs-12','col-sm-6 col-lg-3'));
-    $twitterwall = new Twitterwall();
+$jumbotron_bg = StyleInjector::addBackground(get_field('jumbotron_image'));
+
+$service_list = new ServicesList(get_field('services'));
+$featured_clients_list = new FeaturedClientsList(get_field('clients'));
+
+get_header();
 ?>
-
-</div> <!-- .container-->
-
-<div class="container">
-    <div class="content-block">
-        <?php echo $jumbotron; ?>
+<div class="hero block <?php echo $jumbotron_bg; ?>">
+  <div class="block__content">
+    <h1 class="hero__title"><?php the_field('hero_text'); ?></h1>
+  </div>
+</div>
+<div class="block">
+  <div class="block__content text-block">
+    <h2 class="title title--highlight"><?php the_field('services_title'); ?></h2>
+    <p class="title title--medium"><?php the_field('services_subtitle'); ?></p>
+    <p><?php the_field('services_text'); ?></p>
+  </div>
+</div>
+<?php echo $service_list; ?>
+<div class="block">
+  <div class="block__content text-block">
+    <h2 class="title title--highlight"><?php the_field('block_title'); ?></h2>
+    <p class="title title--medium"><?php the_field('block_subtitle'); ?></p>
+    <p><?php the_field('block_text'); ?></p>
+    <div>
+      <?php echo wp_get_attachment_image(get_field('block_image'), 'large', false, array('class' => 'img-responsive')); ?>
     </div>
-</div>
-
-<div class="alt-bg-color">
-    <div class="container">
-        <section class="content-block">
-            <h1 class="block-title">Palvelut</h1>
-            <?php echo $servicelist; ?>
-        </section>
+    <div>
+      <a href="<?php the_field('block_link'); ?>" class="button">
+        <?php the_field('block_link_text'); ?>
+      </a>
     </div>
+  </div>
 </div>
-
-<div class="container">
-    <section class="content-block">
-        <h1 class="block-title">Asiakkaat</h1>
-        <?php echo $clientslist; ?>
-    </section>
-</div>
-
-<div class="alt-bg-color">
-    <div class="container">
-        <section class="content-block">
-            <h1 class="block-title">Twitter</h1>
-            <?php echo $twitterwall; ?>
-        </section>
-    </div>
-</div>
-
-<?php get_footer();
+<?php echo $featured_clients_list; ?>
+<?php get_footer(); ?>
