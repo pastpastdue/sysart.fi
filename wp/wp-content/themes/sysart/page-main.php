@@ -12,7 +12,7 @@ get_header();
 ?>
 <div class="hero block <?php echo $jumbotron_bg; ?>">
   <div class="block__content">
-    <h1><?php the_field('hero_text'); ?></h1>
+    <h1 class="hero__title"><?php the_field('hero_text'); ?></h1>
   </div>
 </div>
 <div class="block">
