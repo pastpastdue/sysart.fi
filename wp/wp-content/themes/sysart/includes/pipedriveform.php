@@ -1,5 +1,4 @@
 <?php
-
 class PipedriveForm {
   public function __construct($formId = null) {
     $this->formId = $formId;
