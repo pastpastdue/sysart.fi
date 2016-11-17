@@ -17,20 +17,23 @@ get_header();
 </div>
 <div class="block">
   <div class="block__content text-block">
-    <h2 class="title title--highlight">Palvelumme</h2>
-    <p class="title title--medium">Kasvatetaan liiketoimintaasi digitaalisilla palveluilla</p>
-    <p>Me autamme uusien digitaalisten palveluiden luomisessa, vanhojen järjestelmien modernisoinnissa sekä järjestelmäintegraatioissa.</p>
+    <h2 class="title title--highlight"><?php the_field('services_title'); ?></h2>
+    <p class="title title--medium"><?php the_field('services_subtitle'); ?></p>
+    <p><?php the_field('services_text'); ?></p>
   </div>
 </div>
 <?php echo $service_list; ?>
 <div class="block">
   <div class="block__content text-block">
-    <h2 class="title title--highlight">Toimintatapamme</h2>
-    <p class="title title--medium">Olemme poistaneet häsläyksen ohjelmistokehityksestä.</p>
-    <p>Me autamme uusien digitaalisten palveluiden luomisessa, vanhojen järjestelmien modernisoinnissa sekä järjestelmäintegraatioissa.</p>
+    <h2 class="title title--highlight"><?php the_field('block_title'); ?></h2>
+    <p class="title title--medium"><?php the_field('block_subtitle'); ?></p>
+    <p><?php the_field('block_text'); ?></p>
     <div>
-      <a href="http://www.google.fi" class="button">
-        Lue lisää toimitavoista ja sopimusmalleista
+      <?php echo wp_get_attachment_image(get_field('block_image'), 'large', false, array('class' => 'img-responsive')); ?>
+    </div>
+    <div>
+      <a href="<?php the_field('block_link'); ?>" class="button">
+        <?php the_field('block_link_text'); ?>
       </a>
     </div>
   </div>
