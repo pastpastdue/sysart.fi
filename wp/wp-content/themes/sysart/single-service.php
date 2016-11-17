@@ -1,39 +1,24 @@
 <?php
 /**
  * Template Name: Service
- *
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage sysart
- * @since sysart
  */
+
+the_post();
+
+$process = new Process(get_field('process'));
+
 get_header();
-
-$fields = get_fields();
-$post = get_post();
-
-$serviceDescription = new ServiceDescription(apply_filters('the_content', $post->content), $fields['icon']);
-$processWalktrough = new ProcessWalktrough($fields['processes']);
-$servicesList = Utils::getServicesList(false, '', array($post->ID));
-
 ?>
-<div class="container">
-  <section class="content-section post-content">
-    <div class="content">
-
-      <section class="content-block">
-        <h1><?php echo $post->post_title; ?></h1>
-        <?php echo $serviceDescription; ?>
-      </section>
-
-      <section class="content-block">
-        <?php echo $processWalktrough; ?>
-      </section>
-
-      <?php echo $servicesList; ?>
+<div class="row block block--text">
+  <div class="col-sm-6">
+    <div class="block__content">
+      <h1 class="title title--large"><?php the_title(); ?></h1>
+      <?php the_content(); ?>
     </div>
-  </section>
+  </div>
+</div>
+<div class="block">
+  <h2 class="title title--small">Näin me toimimme:</h2>
+  <?php echo $process; ?>
 </div>
 <?php get_footer(); ?>

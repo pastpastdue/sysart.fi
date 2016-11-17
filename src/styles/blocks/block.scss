@@ -31,3 +31,9 @@
     border-top: 0;
   }
 }
+
+.block--text {
+  .block__content {
+    text-align: left;
+  }
+}
