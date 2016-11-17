@@ -6,6 +6,7 @@
 the_post();
 
 $process = new Process(get_field('process'));
+new ReferenceWindow(get_field('reference'), get_field('reference_title'), get_field('reference_link'));
 
 get_header();
 ?>
