@@ -160,9 +160,9 @@ export default (function(window){
 
     openMenu: function () {
       var items = Site.menuState.itemContainer.children;
-      var height = items.length * 50;
+      var height = 0;
       var itemDelay = 0;
-      var itemBetweenDelay = 100;
+      var itemBetweenDelay = 50;
 
       for (var i = 0; i < items.length; i++) {
         var delay = itemDelay + (i * itemBetweenDelay);
@@ -172,6 +172,7 @@ export default (function(window){
         items[i].style['-moz-transition-delay'] = delay + 'ms';
         items[i].style['-o-transition-delay'] = delay + 'ms';
         items[i].style['-ms-transition-delay'] = delay + 'ms';
+        height += items[i].getBoundingClientRect().height;
       }
 
       Site.menuState.itemContainer.style.height = height + 'px';

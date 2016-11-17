@@ -3,7 +3,7 @@
 #wrapper {
   position: relative;
   max-width: $width-page;
-  margin: 0 auto;
+  margin: $height-navbar auto 0;
 }
 
 html, body {
