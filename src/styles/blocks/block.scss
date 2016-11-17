@@ -1,3 +1,4 @@
+@import 'mixins';
 @import 'variables';
 
 .block {
@@ -12,7 +13,7 @@
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  padding: 7em 2.5em 8em;
+  padding: 4em 2.5em 5.5em;
 }
 
 .block--light {
@@ -21,6 +22,7 @@
 
 .block--dark {
   color: $text-color-white;
+  text-shadow: 1px 1px $text-color-normal;
 }
 
 .block--border {
@@ -35,5 +37,11 @@
 .block--text {
   .block__content {
     text-align: left;
+  }
+}
+
+.block--large {
+  .block__content {
+    padding: 7em 2.5em 8em;
   }
 }

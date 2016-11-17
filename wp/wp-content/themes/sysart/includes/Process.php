@@ -1,31 +1,36 @@
 <?php
 class Process {
   public function __construct($process) {
-    $this->process = $process;
-  }
-
-  public function __toString() {
     $steps = '';
 
-
-    foreach ($this->process as $step) {
-      $image = wp_get_attachment_image($step['image'], 'thumbnail', false, array('class' => 'image image--responsive image--center'));
+    foreach ($process as $step) {
+      $bg = StyleInjector::addBackground($step['image']);
 
       $steps .= <<<EOC
-<div class="col-sm-3 text-center">
-  $image
-  <div class="title title--small">
-    {$step['title']}
+<div class="col-sm-6 col-md-3 item item--square $bg">
+  <div class="item__content">
+    <div class="title title--small">
+      {$step['title']}
+    </div>
+    <p>{$step['text']}</p>
   </div>
-  <p>{$step['text']}</p>
 </div>
 EOC;
     }
 
-    return <<<EOC
-<div class="row">
+    $this->content = <<<EOC
+<div class="block">
+  <div class="block__content">
+    <h2 class="title title--medium">Näin me toimimme:</h2>
+  </div>
+</div>
+<div class="block block--dark row no-gutter">
   $steps
 </div>
 EOC;
+  }
+
+  public function __toString() {
+    return $this->content;
   }
 }
