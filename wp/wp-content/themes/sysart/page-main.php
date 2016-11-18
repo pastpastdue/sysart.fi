@@ -3,7 +3,7 @@
  * Template Name: MainPage
  */
 
-$jumbotron_bg = StyleInjector::addBackground(get_field('jumbotron_image'));
+$jumbotron_bg = StyleInjector::addBackground(get_field('hero_image'));
 
 $service_list = new ServicesList(get_field('services'));
 $featured_clients_list = new FeaturedClientsList(get_field('clients'));
