@@ -119,19 +119,6 @@ add_action('init', function () {
     )
   );
 
-  register_post_type('processes',
-    array(
-      'labels' => array(
-        'name' => __('Processes'),
-        'singular_name' => __('Process'),
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'supports' => array('title', 'editor'),
-      'taxonomies' => array('post_tag'),
-    )
-  );
-
   register_post_type('keynumbers',
     array(
       'labels' => array(

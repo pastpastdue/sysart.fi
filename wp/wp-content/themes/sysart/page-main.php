@@ -15,16 +15,16 @@ get_header();
     <h1 class="hero__title"><?php the_field('hero_text'); ?></h1>
   </div>
 </div>
-<div class="block">
-  <div class="block__content text-block">
+<div class="block block--large">
+  <div class="block__content child-margins">
     <h2 class="title title--highlight"><?php the_field('services_title'); ?></h2>
     <p class="title title--medium"><?php the_field('services_subtitle'); ?></p>
     <p><?php the_field('services_text'); ?></p>
   </div>
 </div>
 <?php echo $service_list; ?>
-<div class="block">
-  <div class="block__content text-block">
+<div class="block block--large">
+  <div class="block__content child-margins">
     <h2 class="title title--highlight"><?php the_field('block_title'); ?></h2>
     <p class="title title--medium"><?php the_field('block_subtitle'); ?></p>
     <p><?php the_field('block_text'); ?></p>

@@ -17,7 +17,7 @@ class FeaturedClientsList {
   <div class="col-sm-6 $background item item--square item--background">
   </div>
   <div class="col-sm-6 item item--square item--text">
-    <div class="item__content text-block">
+    <div class="item__content child-margins">
       <div class="title title--highlight">
         $title
       </div>
