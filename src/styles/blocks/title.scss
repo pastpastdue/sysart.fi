@@ -2,7 +2,7 @@
 @import 'variables';
 
 .title {
-
+  font-size: inherit;
 }
 
 .title--highlight {
@@ -31,9 +31,13 @@
 
 .title--small {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .title--light {
   color: $text-color-white;
+}
+
+.title--thinner {
+  font-weight: 500;
 }
