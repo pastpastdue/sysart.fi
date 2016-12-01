@@ -3,7 +3,7 @@
  * Template Name: People
  */
 
-$hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
+//$hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
 
 $employees = get_posts(array(
   'post_type' => 'employee',
@@ -15,8 +15,8 @@ $peoples_list = new PeoplesList($employees);
 
 get_header();
 ?>
-<div class="hero block <?php echo $hero_bg; ?>">
-  <div class="block__content">
+<div class="hero block">
+  <div class="block__content block--light">
     <h1 class="hero__title"><?php the_title(); ?></h1>
   </div>
 </div>
