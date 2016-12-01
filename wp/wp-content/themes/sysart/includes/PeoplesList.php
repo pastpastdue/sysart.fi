@@ -16,7 +16,6 @@ class PeoplesList {
       $bg = StyleInjector::addBackground(get_field('image', $people->ID));
 
       $fields = get_fields($people->ID);
-
       $email = $this->create_email_link($fields['email']);
       $phone = $this->create_phone_link($fields['phone']);
       $social_links = $this->create_social_links($fields);
@@ -26,9 +25,9 @@ class PeoplesList {
   <div class="item item--background item--square $bg">
   </div>
   <div class="item item--square">
-    <div class="item__content no-child-margins people-content">
-      <h1 class="title title--small">{$fields->title}</h1>
-      <h2 class="title title--thinner">{$people->post_title}</h2>
+    <div class="item__content people-content">
+      <h1 class="title title--small">{$people->post_title}</h1>
+      <h2 class="title title--thinner">{$fields['title']}</h2>
       $phone
       $email
       $social_links
