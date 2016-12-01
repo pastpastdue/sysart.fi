@@ -7,7 +7,7 @@ class Process {
       $bg = StyleInjector::addBackground($step['image']);
 
       $steps .= <<<EOC
-<div class="col-sm-6 col-md-3 item item--square $bg">
+<div class="col-sm-6 col-md-3 item item--square item--background $bg">
   <div class="item__content">
     <div class="title title--small">
       {$step['title']}
