@@ -2,18 +2,16 @@
 @import 'variables';
 
 .title {
-  font-size: inherit;
+  font-family: 'Campton', sans-serif;
+  $headings-font-weight: 700;
+  line-height: 1.3;
 }
 
 .title--highlight {
   text-transform: uppercase;
   color: $color-brand;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 600;
-
-  @include use-down('sm') {
-    font-size: 16px;
-  }
 }
 
 .title--large {
@@ -22,22 +20,14 @@
 
 .title--medium {
   font-weight: 600;
-  font-size: 36px;
-
-  @include use-down('sm') {
-    font-size: 24px;
-  }
+  font-size: 2rem;
 }
 
 .title--small {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .title--light {
   color: $text-color-white;
-}
-
-.title--thinner {
-  font-weight: 500;
 }

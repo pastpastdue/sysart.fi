@@ -74,9 +74,16 @@
   a {
     text-transform: uppercase;
     color: $text-color-normal;
+    transition: 0.2s color;
+
+    &:hover {
+      color: $color-brand;
+    }
   }
 
-
+  .spacer {
+    flex: 1 0 auto;
+  }
 }
 
 .nav-bar__wrapper {
@@ -89,5 +96,5 @@
 }
 
 .nav-bar__logo {
-  flex: 1 0 auto;
+  max-width: 100px;
 }

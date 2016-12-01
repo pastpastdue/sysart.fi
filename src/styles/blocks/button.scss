@@ -11,6 +11,14 @@
   background: none;
   outline: none;
   user-select: none;
+  opacity: 1;
+  transition: 0.2s opacity;
+  font-weight: 400;
+
+  &:hover {
+    color: $color-brand;
+    opacity: 0.7;
+  }
 }
 
 .button--dark {

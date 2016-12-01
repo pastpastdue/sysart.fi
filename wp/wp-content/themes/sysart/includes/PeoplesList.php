@@ -9,27 +9,26 @@ class PeoplesList {
 
   public function __construct($peoples) {
     $this->peoples = $peoples;
-  }
 
-  public function __toString() {
-    /** @var WP_Post $people */
-    $content = "";
+    $this->content = "";
 
     foreach ($this->peoples as $people) {
-      $image = wp_get_attachment_image(get_field('image', $people->ID), array(768, 768), false, array('class' => 'image image--responsive'));
+      $bg = StyleInjector::addBackground(get_field('image', $people->ID));
+
       $fields = get_fields($people->ID);
 
       $email = $this->create_email_link($fields['email']);
       $phone = $this->create_phone_link($fields['phone']);
       $social_links = $this->create_social_links($fields);
 
-      $content .= <<<EOC
-<section class="col-xs-12 col-sm-4 col-md-3">
-  $image
+      $this->content .= <<<EOC
+<section class="col-tn-12 col-xs-6 col-sm-4 col-md-3 employee-card">
+  <div class="item item--background item--square $bg">
+  </div>
   <div class="item item--square">
     <div class="item__content no-child-margins people-content">
-      <h1 class="title title--small">{$people->post_title}</h1>
-      <h2 class="title title--thinner">{$fields['title']}</h2>
+      <h1 class="title title--small">{$fields->title}</h1>
+      <h2 class="title title--thinner">{$people->post_title}</h2>
       $phone
       $email
       $social_links
@@ -38,10 +37,14 @@ class PeoplesList {
 </section>
 EOC;
     }
+  }
 
+  public function __toString() {
     return <<<EOC
-<div class="block row no-gutter peoples-list text text--small">
-  $content
+<div class="block">
+  <div class="row">
+    {$this->content}
+  </div>
 </div>
 EOC;
   }
@@ -78,6 +81,6 @@ EOC;
       }
     }
 
-    return $links ? "<div class=\"social-links\">$links</div>" : "";
+    return $links ? "<div class=\"employee-card__social-links\">$links</div>" : "";
   }
 }

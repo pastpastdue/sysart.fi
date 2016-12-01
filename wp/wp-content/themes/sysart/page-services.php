@@ -9,7 +9,6 @@ $service_list = new ServicesList(get_field('services'));
 
 get_header();
 
-$contactForm = new PipedriveForm(get_field('pipedrive_form_id'));
 ?>
 <div class="hero block <?php echo $hero_bg; ?>">
   <div class="block__content">
@@ -17,14 +16,9 @@ $contactForm = new PipedriveForm(get_field('pipedrive_form_id'));
   </div>
 </div>
 <div class="block">
-  <div class="block__content">
+  <div class="block__content text text--medium">
     <?php the_content(); ?>
   </div>
 </div>
 <?php echo $service_list; ?>
-<div class="block">
-  <div class="block__content">
-    <?php echo $contactForm; ?>
-  </div>
-</div>
 <?php get_footer(); ?>

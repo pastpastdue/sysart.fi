@@ -13,7 +13,8 @@
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  padding: 4em 2.5em 5.5em;
+  padding: 5rem 2.5rem 5.5rem;
+  font-weight: 200;
 }
 
 .block--light {
@@ -22,7 +23,6 @@
 
 .block--dark {
   color: $text-color-white;
-  text-shadow: 1px 1px $text-color-normal;
 }
 
 .block--border {
@@ -43,5 +43,11 @@
 .block--large {
   .block__content {
     padding: 7em 2.5em 8em;
+  }
+}
+
+.block--condensed-bottom {
+  .block__content {
+    padding-bottom: 1rem;
   }
 }

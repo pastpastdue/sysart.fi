@@ -11,7 +11,7 @@ class NavBar {
 
     $home_link = get_site_url();
     $frontpage = get_post(get_option('page_on_front'));
-    $logo = wp_get_attachment_image(get_field('logo', $frontpage));
+    $logo = wp_get_attachment_image(get_field('logo', $frontpage), thumbnail, false, array('class' => 'image image--responsive'));
 
     $items = wp_nav_menu(array(
       'walker' => new CustomWalker(),
@@ -29,17 +29,13 @@ class NavBar {
         $logo
       </a>
     </div>
+    <div class="spacer"></div>
     $items
     <button id="$burger_id" class="burger-button button button--icon button--dark button--borderless">
       &#9776;
     </button>
   </div>
 </nav>
-<script type="text/javascript">
-  (function(Site){
-    Site.initMenu(document.getElementById('$menu_id'), document.getElementById('$burger_id'), document.getElementById('$container_id'));
-  })(Site);
-</script>
 EOC;
   }
 }

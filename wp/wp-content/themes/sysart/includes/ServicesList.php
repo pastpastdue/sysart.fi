@@ -7,13 +7,13 @@ class ServicesList {
   public function __toString() {
     $services = '';
 
-    foreach ($this->service_ids as $id) {
+    foreach ($this->service_ids as $i=>$id) {
       $post = get_post($id);
       $image = wp_get_attachment_image(get_field('icon', $id), 'thumbnail', false, array('class' => 'item__image'));
       $url = get_permalink($id);
 
       $services .= <<<EOC
-<div class="col-sm-4 item item--square">
+<div class="col-sm-4 item item--square index-$i">
   <a href="$url">
     <div class="item__content">
       $image

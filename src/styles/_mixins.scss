@@ -1,14 +1,7 @@
-@import 'bootstrap/variables';
-
-$responsive-sizes: (
-  xs: $screen-xs-min $screen-xs-max,
-  sm: $screen-sm-min $screen-sm-max,
-  md: $screen-md-min $screen-md-max,
-  lg: $screen-lg-min 0
-);
+@import 'variables';
 
 @mixin use-up($size) {
-  $sizes: map-get($responsive-sizes, $size);
+  $sizes: map-get($breakpoints, $size);
 
   @media (min-width: nth($sizes, 1)) {
     @content;
@@ -16,9 +9,13 @@ $responsive-sizes: (
 }
 
 @mixin use-down($size) {
-  $sizes: map-get($responsive-sizes, $size);
+  $sizes: map-get($breakpoints, $size);
 
   @media (max-width: nth($sizes, 1) - 1px) {
     @content;
   }
+}
+
+@mixin gradient-vertical($from, $to) {
+  background: linear-gradient(to bottom, $from, $to);
 }
