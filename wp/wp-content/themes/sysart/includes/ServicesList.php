@@ -9,25 +9,27 @@ class ServicesList {
 
     foreach ($this->service_ids as $i=>$id) {
       $post = get_post($id);
-      $image = wp_get_attachment_image(get_field('icon', $id), 'thumbnail', false, array('class' => 'item__image'));
+      $image = wp_get_attachment_image(get_field('icon', $id), array(480, 0), false, array('class' => 'item__image'));
       $url = get_permalink($id);
 
       $services .= <<<EOC
-<div class="col-sm-4 item item--square index-$i">
-  <a href="$url">
-    <div class="item__content">
-      $image
-      <div class="item__title title title--medium title--light">
-        {$post->post_title}
+<div class="col-sm-4">
+  <div class="item item--square index-$i">
+    <a href="$url">
+      <div class="item__content">
+        $image
+        <div class="item__title title title--medium title--light">
+          {$post->post_title}
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </div>
 EOC;
     }
 
     return <<<EOC
-<div class="block block--dark row no-gutter services-list">
+<div class="block row services-list">
   $services
 </div>
 EOC;
