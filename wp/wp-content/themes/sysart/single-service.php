@@ -17,7 +17,7 @@ get_header();
     <h1 class="hero__title"><?php the_title(); ?></h1>
   </div>
 </div>
-<div class="block block--text">
+<div class="block block--text wysiwyg">
   <div class="block__content">
     <?php the_content(); ?>
   </div>

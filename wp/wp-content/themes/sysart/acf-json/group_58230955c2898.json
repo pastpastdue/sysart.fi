@@ -1,6 +1,6 @@
 {
     "key": "group_58230955c2898",
-    "title": "clients",
+    "title": "Clients post",
     "fields": [
         {
             "key": "field_5773e4538b208",
@@ -44,24 +44,6 @@
             "maxlength": "",
             "rows": "",
             "new_lines": "br"
-        },
-        {
-            "key": "field_5773e4778b20a",
-            "label": "text",
-            "name": "text",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "toolbar": "full",
-            "media_upload": 0,
-            "tabs": "all"
         },
         {
             "key": "field_5773e4858b20b",
@@ -356,5 +338,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1580593265
+    "modified": 1480597897
 }
