@@ -1,3 +1,5 @@
+@import 'variables';
+
 .item {
   position: relative;
 
@@ -66,4 +68,37 @@
   height: auto;
   max-width: 50%;
   margin-bottom: 1em;
+}
+
+.item--hover {
+  a {
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.3s, color 0.3s;
+    color: $text-color-white;
+
+    &:hover {
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.8);
+      color: $text-color-normal;
+
+      > * {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.item--hide-blur {
+  a {
+    > * {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &:hover {
+      > * {
+        opacity: 1;
+      }
+    }
+  }
 }

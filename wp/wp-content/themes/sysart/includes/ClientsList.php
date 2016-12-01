@@ -11,7 +11,7 @@ class ClientsList {
 
       $this->clients .= <<<EOC
 <section class="col-xs-12 col-sm-4 col-md-3">
-  <div class="item item--small-margin item--square item--background $background">
+  <div class="item item--small-margin item--square item--background $background item--hover item--hide-blur">
     <a href="$url">
       <div class="item__content no-child-margins">
         {$post->post_title}
@@ -26,7 +26,7 @@ EOC;
 
   public function __toString() {
     return <<<EOC
-<div class="block row no-gutter text text--small clients-list">
+<div class="block row no-gutter text text--small">
   {$this->clients}
 </div>
 EOC;

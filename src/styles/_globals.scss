@@ -35,10 +35,10 @@ html, body {
 }
 
 a {
-  color: $text-color-normal;
+  color: inherit;
 
   &:hover, &:focus, &:active {
-    color: $text-color-normal;
+    color: inherit;
   }
 }
 

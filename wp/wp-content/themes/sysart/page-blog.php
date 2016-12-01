@@ -1,26 +1,16 @@
 <?php
 /**
  * Template Name: Blogs
- *
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage sysart
- * @since sysart
  */
-$fields = get_fields();
+$blog_list = new BlogList(get_field('blogs'));
 
 get_header();
+the_post();
 ?>
-<div class="container">
-  <section class="content-section">
-    <div class="title">
-      <h1><?php echo $post->post_title; ?></h1>
-    </div>
-    <div class="content">
-      <?php echo new PostGrid(array('items' => $fields['blogs'], 'force' => true)); ?>
-    </div>
-  </section>
+<div class="hero block block--light">
+  <div class="block__content">
+    <h1 class="hero__title"><?php the_title(); ?></h1>
+  </div>
 </div>
+<?php echo $blog_list; ?>
 <?php get_footer(); ?>
