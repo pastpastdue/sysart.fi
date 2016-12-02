@@ -18,18 +18,22 @@ get_header();
     <h1 class="hero__title"><?php the_title(); ?></h1>
   </div>
 </div>
-<div class="block row no-gutter text text--small">
-  <?php foreach ($footer as $element): if ($element['acf_fc_layout'] === 'address'): ?>
-    <section class="col-md-4">
-      <div class="item item--center">
-        <div class="item__content">
-          <?php echo wp_get_attachment_image($element['image'], 'thumbnail', false, array('class' => 'item__image')); ?>
-          <div class="title title--small"><?php echo $element['title']; ?></div>
-          <address class="address"><?php echo $element['text']; ?></address>
-        </div>
-      </div>
-    </section>
-  <?php endif; endforeach; ?>
+<div class="block block--full-width text text--small">
+  <div class="block__content">
+    <div class="row">
+      <?php foreach ($footer as $element): if ($element['acf_fc_layout'] === 'address'): ?>
+        <section class="col-md-4">
+          <div class="item item--center">
+            <div class="item__content">
+              <?php echo wp_get_attachment_image($element['image'], 'thumbnail', false, array('class' => 'item__image')); ?>
+              <div class="title title--small"><?php echo $element['title']; ?></div>
+              <address class="address"><?php echo $element['text']; ?></address>
+            </div>
+          </div>
+        </section>
+      <?php endif; endforeach; ?>
+    </div>
+  </div>
 </div>
 <?php echo $peoples_list; ?>
 <?php get_footer(); ?>

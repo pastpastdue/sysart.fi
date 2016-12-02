@@ -17,6 +17,16 @@
   font-weight: 200;
 }
 
+.block--full-width {
+  .block__content {
+    padding: 2rem 0 2.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    margin: 0;
+  }
+}
+
 .block--light {
   color: $text-color-normal;
 }
