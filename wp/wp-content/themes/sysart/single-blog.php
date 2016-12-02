@@ -9,7 +9,7 @@ $hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
 
 $people_list = new PeopleList(get_field('author'), true);
 $related_articles = get_field('related_articles');
-$blog_list = new BlogList($related_articles, true);
+$blog_list = $related_articles ? new BlogList($related_articles, true) : '';
 
 get_header();
 
@@ -27,7 +27,7 @@ $image = $fields['jumbotron_image'] ? $fields['jumbotron_image'] : $fields['imag
   </div>
 </div>
 <?php echo $people_list; ?>
-<?php if (count($related_articles) > 0): ?>
+<?php if ($related_articles): ?>
   <div class="block block--condensed-bottom">
     <div class="block__content">
       <h2 class="title title--medium">
