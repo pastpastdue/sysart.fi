@@ -1,5 +1,5 @@
 <?php
-class PeoplesList {
+class PeopleList {
   const SOCIAL_LINKS = array(
     'link_linkedin' => 'ion ion-social-linkedin',
     'link_twitter' => 'ion ion-social-twitter',
@@ -7,15 +7,17 @@ class PeoplesList {
     'link_homepage' => 'ion ion-link'
   );
 
-  public function __construct($peoples) {
-    $this->peoples = $peoples;
+  public function __construct($people, $center = false) {
+    $this->people = $people;
+    $this->center = $center;
 
     $this->content = "";
 
-    foreach ($this->peoples as $people) {
-      $bg = StyleInjector::addBackground(get_field('image', $people->ID));
+    foreach ($this->people as $person_id) {
+      $person = get_post($person_id);
+      $bg = StyleInjector::addBackground(get_field('image', $person->ID));
 
-      $fields = get_fields($people->ID);
+      $fields = get_fields($person->ID);
       $email = $this->create_email_link($fields['email']);
       $phone = $this->create_phone_link($fields['phone']);
       $social_links = $this->create_social_links($fields);
@@ -26,7 +28,7 @@ class PeoplesList {
   </div>
   <div class="item item--square">
     <div class="item__content people-content">
-      <h1 class="title title--small">{$people->post_title}</h1>
+      <h1 class="title title--small">{$person->post_title}</h1>
       <h2 class="title title--thinner">{$fields['title']}</h2>
       $phone
       $email
@@ -39,9 +41,15 @@ EOC;
   }
 
   public function __toString() {
+    $class = "row";
+
+    if ($this->center) {
+      $class .= " row--center";
+    }
+
     return <<<EOC
 <div class="block">
-  <div class="row">
+  <div class="$class">
     {$this->content}
   </div>
 </div>

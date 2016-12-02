@@ -11,7 +11,7 @@ $employees = get_posts(array(
   'numberposts' => -1
 ));
 
-$peoples_list = new PeoplesList($employees);
+$people_list = new PeopleList($employees);
 
 get_header();
 ?>
@@ -20,5 +20,5 @@ get_header();
     <h1 class="hero__title"><?php the_title(); ?></h1>
   </div>
 </div>
-<?php echo $peoples_list; ?>
+<?php echo $people_list; ?>
 <?php get_footer(); ?>

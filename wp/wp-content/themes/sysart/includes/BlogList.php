@@ -1,7 +1,8 @@
 <?php
 class BlogList {
-  public function __construct($blog_ids) {
+  public function __construct($blog_ids, $center = false) {
     $this->blogs = '';
+    $this->center = $center;
 
     foreach ($blog_ids as $id) {
       $post = get_post($id);
@@ -27,8 +28,14 @@ EOC;
   }
 
   public function __toString() {
+    $class = "row";
+
+    if ($this->center) {
+      $class .= " row--center";
+    }
+
     return <<<EOC
-<div class="block row no-gutter text text--small">
+<div class="block $class text text--small">
   {$this->blogs}
 </div>
 EOC;

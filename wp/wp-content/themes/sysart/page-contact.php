@@ -8,8 +8,7 @@ the_post();
 
 $footer = get_field('footer', get_option('page_on_front'));
 
-$peoples_list = new PeoplesList(get_field('employees'));
-
+$people_list = new PeopleList(get_field('employees'));
 
 get_header();
 ?>
@@ -35,5 +34,5 @@ get_header();
     </div>
   </div>
 </div>
-<?php echo $peoples_list; ?>
+<?php echo $people_list; ?>
 <?php get_footer(); ?>
