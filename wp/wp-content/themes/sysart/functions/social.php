@@ -16,7 +16,7 @@ add_action('wp_head', function () {
 
   foreach ($properties as $key=>$value) {
     if ($value) {
-      echo "<meta property=\"$key\" value=\"$value\"/>";
+      echo "<meta property=\"$key\" content=\"$value\"/>";
     }
   }
 
