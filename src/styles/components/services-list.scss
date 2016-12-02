@@ -14,6 +14,10 @@
     @include gradient-vertical(#FA6700, #E14707);
   }
 
+  .item.index-3 {
+    @include gradient-vertical(#FCDB57, #FAA42F);
+  }
+
   .item__image {
     transition: max-width 0.3s;
   }

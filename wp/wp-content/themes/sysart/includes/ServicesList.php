@@ -13,7 +13,7 @@ class ServicesList {
       $url = get_permalink($id);
 
       $services .= <<<EOC
-<div class="col-sm-4">
+<div class="col-tn-12 col-sm-6 col-lg">
   <div class="item item--square index-$i">
     <a href="$url">
       <div class="item__content">

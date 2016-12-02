@@ -29,7 +29,7 @@ get_header();
     <p class="title title--medium"><?php the_field('block_subtitle'); ?></p>
     <p><?php the_field('block_text'); ?></p>
     <div>
-      <?php echo wp_get_attachment_image(get_field('block_image'), 'large', false, array('class' => 'img-responsive')); ?>
+      <?php echo wp_get_attachment_image(get_field('block_image'), 'large', false, array('class' => 'image image--responsive')); ?>
     </div>
     <div>
       <a href="<?php the_field('block_link'); ?>" class="button">
