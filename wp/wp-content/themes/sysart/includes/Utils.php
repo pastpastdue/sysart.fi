@@ -221,7 +221,7 @@ class Utils {
       return $posts;
   }
 
-  public static function getJobsList() {
+  public static function getJobs() {
     $args = array(
       'orderby'          => 'menu_order',
       'order'            => 'DESC',
@@ -233,6 +233,6 @@ class Utils {
     $posts = get_posts($args);
     self::postSort($posts);
 
-    return new JobsList($posts);
+    return $posts;
   }
 }
