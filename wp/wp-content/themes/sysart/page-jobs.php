@@ -23,8 +23,8 @@ the_post();
     <?php echo new Benefits(get_field('benefits')); ?>
   </section>
   <section class="content-block">
-    <div class="row text-center">
-      <h2><?php the_field('jobs_title'); ?></h2>
+    <div class="row text-center text-container">
+      <h2 class="strong"><?php the_field('jobs_title'); ?></h2>
     </div>
     <?php echo Utils::getJobsList(); ?>
   </section>
