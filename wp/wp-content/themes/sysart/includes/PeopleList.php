@@ -1,6 +1,6 @@
 <?php
 class PeopleList {
-  const SOCIAL_LINKS = array(
+  private static $social_classes = array(
     'link_linkedin' => 'ion ion-social-linkedin',
     'link_twitter' => 'ion ion-social-twitter',
     'link_github' => 'ion ion-social-github',
@@ -81,7 +81,7 @@ EOC;
   private function create_social_links($fields) {
     $links = '';
 
-    foreach (self::SOCIAL_LINKS as $link_key => $link_class) {
+    foreach (self::$social_classes as $link_key => $link_class) {
       if ($fields[$link_key]) {
         $value = $fields[$link_key];
         $links .= "<a href=\"$value\" target=\"_blank\"><i class=\"$link_class\"></i></a>";
