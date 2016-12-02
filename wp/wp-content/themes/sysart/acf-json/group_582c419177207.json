@@ -5,7 +5,7 @@
         {
             "key": "field_582c419e9d6b9",
             "label": "Share title",
-            "name": "share_",
+            "name": "share_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -19,7 +19,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": 70
         },
         {
             "key": "field_582c41a99d6ba",
@@ -62,7 +62,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": 300
         },
         {
             "key": "field_582c41c99d6bc",
@@ -119,7 +119,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": 200
         }
     ],
     "location": [
@@ -139,5 +139,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1480604746
+    "modified": 1480667033
 }
