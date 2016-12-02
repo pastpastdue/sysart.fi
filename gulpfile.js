@@ -37,7 +37,7 @@ gulp.task('scripts', () => {
 gulp.task('sass', () => {
     return gulp.src(paths.styles)
         .pipe(sass({
-          includePaths: paths.stylesIncludePaths
+          includePaths: paths.stylesIncludePaths
         }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 4 versions'],
@@ -61,13 +61,14 @@ gulp.task('copy:fonts', () => {
 gulp.task('sass:production', () => {
     return gulp.src(paths.styles)
         .pipe(sass({
+          includePaths: paths.stylesIncludePaths,
           outputStyle: 'compressed'
         }).on('error', sass.logError))
-        .pipe(rename(paths.stylesName))
         .pipe(autoprefixer({
             browsers: ['last 4 versions'],
             cascade: false
         }))
+        .pipe(concat(paths.stylesName))
         .pipe(gulp.dest(paths.stylesDest))
 });
 
