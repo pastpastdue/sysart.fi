@@ -3,8 +3,9 @@ set -e
 
 REPO_DIR="/root/sysart"
 TARGET_DIR="/var/www/html"
+BRANCH=${2:-master}
 
-if [ "$#" -ne 1 ]; then
+if [ "$#" -lt 1 ]; then
     echo "This script will pull the latest git master to live server and run npm scripts for styles"
     echo "Usage: deploy_live.sh [remote url]"
     exit
@@ -15,6 +16,7 @@ REMOTE_URL=$1
 echo "--- Pulling newest changes & running scripts ---"
 ssh $1 "
 cd $REPO_DIR && \
+git checkout $BRANCH && \
 git pull && \
 git clean -fdx -e node_modules && \
 npm install && \
