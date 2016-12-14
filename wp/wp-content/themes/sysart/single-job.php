@@ -17,6 +17,5 @@ the_post();
     </div>
   </section>
 </div>
-<?php
-get_footer();
-?>
+<?php echo new AddThis(); ?>
+<?php get_footer(); ?>
