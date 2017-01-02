@@ -11,10 +11,10 @@ Make sure you have installed docker (http://www.docker.com/products/docker)
 
 1. Inside the project run:
 
-    docker-compose up
-    ./get_data.sh sysart.live **password** http://localhost:8080 yes
-    npm install
-    npm run dev
+        docker-compose up
+        ./get_data.sh sysart.live **password** http://localhost:8080 yes
+        npm install
+        npm run dev
 
 2. Open localhost:8080 in your browser
 
