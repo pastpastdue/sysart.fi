@@ -9,7 +9,7 @@ $footer = get_field('footer', get_option('page_on_front'));
             <div class="item col-sm-3">
               <div class="item__content">
                 <?php if ($element['acf_fc_layout'] == 'address'): ?>
-                  <div class="title title--small"><?php echo $element['title']; ?></div>
+                  <div class="title title--margin title--small"><?php echo $element['title']; ?></div>
                   <address class="address"><?php echo $element['text']; ?></address>
                 <?php else: ?>
                   <?php echo wp_get_attachment_image($element['image']); ?>
