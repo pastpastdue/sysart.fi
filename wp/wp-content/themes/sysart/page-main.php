@@ -10,7 +10,7 @@ $featured_clients_list = new FeaturedClientsList(get_field('clients'));
 
 get_header();
 ?>
-<div class="hero block <?php echo $jumbotron_bg; ?>">
+<div class="hero hero--large block <?php echo $jumbotron_bg; ?>">
   <div class="block__content">
     <h1 class="hero__title"><?php the_field('hero_text'); ?></h1>
   </div>
