@@ -26,8 +26,8 @@ class PeopleList {
 <section class="col-tn-12 col-xs-6 col-sm-4 col-md-3 employee-card">
   <div class="item item--background item--square $bg">
   </div>
-  <div class="item item--square">
-    <div class="item__content people-content">
+  <div>
+    <div class="people-content text--center">
       <h1 class="title title--small">{$person->post_title}</h1>
       <h2 class="title title--thinner">{$fields['title']}</h2>
       $phone
