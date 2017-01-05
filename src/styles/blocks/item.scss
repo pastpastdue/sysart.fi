@@ -30,8 +30,7 @@
     transform: translate(-50%,-50%);
     text-align: center;
     margin: 0;
-    width: 90%;
-    font-weight: 200;
+    width: 90%;  
   }
 
   > a {
@@ -61,6 +60,7 @@
 
 .item__content {
   margin: 3rem;
+  font-weight: 200;
 }
 
 .item__image {
