@@ -16,7 +16,7 @@ the_post();
     <h1 class="hero__title"><?php the_title(); ?></h1>
   </div>
 </div>
-<div class="block">
+<div class="block wysiwyg">
   <div class="block__content text text--medium">
     <?php the_content(); ?>
   </div>
