@@ -12,7 +12,7 @@ Make sure you have installed docker (http://www.docker.com/products/docker)
 1. Inside the project run:
 
         docker-compose up
-        ./get_data.sh sysart.live **password** http://localhost:8080 yes
+        scripts/get_data.sh sysart.live **password** http://localhost:8080 yes
         npm install
         npm run dev
 
@@ -31,25 +31,25 @@ After running **get_data.sh** and setting up your local environment, the common 
 
 Copies live database & uploaded files to your local setup so that your local setup resembles the live setup.
 
-    ./get_data.sh
+    scripts/get_data.sh
 
 **deploy_live.sh**
 
 Deploys the newest master branch version to live environment.
 
-    ./deploy_live.sh
+    scripts/deploy_live.sh
 
 **backup.sh**
 
 Backs up live environment so that it can be restored with restore.sh
 
-    ./backup.sh
+    scripts/backup.sh
 
 **restore.sh**
 
 Restores previously backed up live environment
 
-    ./restore.sh
+    scripts/restore.sh
 
 ### Debugging
 
