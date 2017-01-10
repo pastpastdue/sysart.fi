@@ -21,7 +21,7 @@ EOC;
     }
 
     $this->content = <<<EOC
-<div class="block">
+<div class="block block--condensed-bottom">
   <div class="block__content">
     <h2 class="title title--medium">Näin me toimimme:</h2>
   </div>
