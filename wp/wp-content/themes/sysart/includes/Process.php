@@ -7,7 +7,7 @@ class Process {
       $bg = StyleInjector::addBackground($step['image']);
 
       $steps .= <<<EOC
-<div class="col-xs-6 col-md-3">
+<div class="col-xs-6 col-md-3 process">
   <div class="item item--background item--square $bg">
   </div>
   <div class="item__content text--center">
@@ -21,7 +21,7 @@ EOC;
     }
 
     $this->content = <<<EOC
-<div class="block">
+<div class="block block--condensed-bottom">
   <div class="block__content">
     <h2 class="title title--medium">Näin me toimimme:</h2>
   </div>
