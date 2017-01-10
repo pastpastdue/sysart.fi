@@ -344,6 +344,31 @@
             "return_format": "id"
         },
         {
+            "key": "field_58749dfb69294",
+            "label": "Featured blogs",
+            "name": "featured_blogs",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "blog"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "id"
+        },
+        {
             "key": "field_582d8b6143409",
             "label": "Footer",
             "name": "",
@@ -496,20 +521,11 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content",
-        "custom_fields",
-        "discussion",
-        "comments",
-        "revisions",
-        "author",
-        "format",
-        "send-trackbacks"
-    ],
+    "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1480596406
+    "modified": 1484037801
 }
