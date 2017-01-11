@@ -24,7 +24,7 @@ class PeopleList {
 
       $this->content .= <<<EOC
 <section class="col-tn-12 col-xs-6 col-sm-4 col-md-3 employee-card">
-  <div class="item item--background item--square $bg">
+  <div class="item item--background item--square item--small-margin $bg">
   </div>
   <div>
     <div class="people-content text--center">
