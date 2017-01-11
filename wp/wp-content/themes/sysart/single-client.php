@@ -4,7 +4,7 @@
  */
 
 the_post();
-$team_list = new PeopleList(get_field('employees'), true, "Projektin tiimi:");
+$team_list = new PeopleList(get_field('employees'), true);
 $hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
 
 get_header();
@@ -18,6 +18,7 @@ get_header();
 </div>
 <div class="block block--condensed-top block--condensed-bottom">
   <div class="block__content">
+    <h2 class="title title--medium title--margin text--left">Projektin tiimi:</h2>
     <?php echo $team_list; ?>
   </div>
 </div>

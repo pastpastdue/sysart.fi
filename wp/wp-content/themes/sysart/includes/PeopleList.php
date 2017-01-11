@@ -7,10 +7,9 @@ class PeopleList {
     'link_homepage' => 'ion ion-link'
   );
 
-  public function __construct($people, $center = false, $title = "") {
+  public function __construct($people, $center = false) {
     $this->people = $people;
     $this->center = $center;
-    $this->title = $title;
 
     $this->content = "";
 
@@ -43,18 +42,12 @@ EOC;
 
   public function __toString() {
     $class = "row";
-    $title_html = "";
 
     if ($this->center) {
       $class .= " row--center";
     }
 
-    if ($this->title != "") {
-      $title_html = '<h2 class="title title--medium title--margin text--left">' . $this->title . '</h2>';
-    }
-
     return <<<EOC
-{$title_html}
 <div class="block">
   <div class="$class">
     {$this->content}
