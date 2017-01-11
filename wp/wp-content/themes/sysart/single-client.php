@@ -4,6 +4,7 @@
  */
 
 the_post();
+$team_list = new PeopleList(get_field('employees'), true, "Projektin tiimi:");
 $hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
 
 get_header();
@@ -13,6 +14,11 @@ get_header();
 <div class="block block--text wysiwyg">
   <div class="block__content">
     <?php the_content(); ?>
+  </div>
+</div>
+<div class="block block--condensed-top block--condensed-bottom">
+  <div class="block__content">
+    <?php echo $team_list; ?>
   </div>
 </div>
 <?php echo new AddThis(); ?>
