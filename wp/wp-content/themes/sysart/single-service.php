@@ -22,6 +22,6 @@ get_header();
     <?php the_content(); ?>
   </div>
 </div>
-<?php echo $reference_window; ?>
 <?php echo $process; ?>
+<?php echo $reference_window; ?>
 <?php get_footer(); ?>
