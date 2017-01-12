@@ -1,6 +1,6 @@
 {
     "key": "group_58230955c2898",
-    "title": "Clients post",
+    "title": "Client Page",
     "fields": [
         {
             "key": "field_5773e4538b208",
@@ -44,6 +44,25 @@
             "maxlength": "",
             "rows": "",
             "new_lines": "br"
+        },
+        {
+            "key": "field_587789359fbba",
+            "label": "Team title",
+            "name": "team_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "esim. \"Projektin tiimi\"",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5773e4858b20b",
@@ -338,5 +357,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1480597897
+    "modified": 1484229067
 }
