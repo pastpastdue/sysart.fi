@@ -16,9 +16,13 @@ get_header();
     <?php the_content(); ?>
   </div>
 </div>
-<div class="block block--condensed-top block--condensed-bottom">
+<div class="block block--full-width block--condensed-top block--condensed-bottom">
   <div class="block__content">
-    <h2 class="title title--medium title--margin text--left">Projektin tiimi:</h2>
+    <h2 class="title title--medium title--margin">Projektin tiimi:</h2>
+  </div>
+</div>
+<div class="block block--full-width block--condensed-bottom">
+  <div class="block__content">
     <?php echo $team_list; ?>
   </div>
 </div>
