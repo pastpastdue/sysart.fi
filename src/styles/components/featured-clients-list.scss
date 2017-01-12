@@ -5,11 +5,6 @@
     > .row:nth-child(2n) {
       flex-direction: row-reverse;
     }
-  }
-}
-
-.featured-clients-list {
-  @media(min-width: 768px) {
     .item--text {
       &:before {
         content: '';
@@ -37,5 +32,4 @@
       }
     }
   }
-
 }
