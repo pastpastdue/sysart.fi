@@ -11,22 +11,22 @@ class Process {
   <div class="item item--background item--square $bg">
   </div>
   <div class="item__content text--center">
-    <div class="title title--small">
+    <div class="title title--small title--margin title--extra-line-height">
       {$step['title']}
     </div>
-    <p>{$step['text']}</p>
+    <p class="text--extra-line-height">{$step['text']}</p>
   </div>
 </div>
 EOC;
     }
 
     $this->content = <<<EOC
-<div class="block block--condensed-bottom">
+<div class="block block--condensed-bottom block--condensed-top">
   <div class="block__content">
     <h2 class="title title--medium">Näin me toimimme:</h2>
   </div>
 </div>
-<div class="block block--light row no-gutter">
+<div class="block block--spacious-bottom block--light row no-gutter">
   $steps
 </div>
 EOC;
