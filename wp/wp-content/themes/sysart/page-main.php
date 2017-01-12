@@ -40,7 +40,14 @@ get_header();
   </div>
 </div>
 <?php echo $featured_clients_list; ?>
-<div class="block block--full-width">
+<div class="block block--large">
+  <div class="block__content child-margins">
+    <h2 class="title title--highlight"><?php the_field('blog_intro_title'); ?></h2>
+    <p class="title title--medium"><?php the_field('blog_intro_subtitle'); ?></p>
+    <p><?php the_field('blog_intro_text'); ?></p>
+  </div>
+</div>
+<div class="block block--full-width block--condensed-top">
   <div class="block__content">
     <?php echo $featured_blog_list; ?>
   </div>
