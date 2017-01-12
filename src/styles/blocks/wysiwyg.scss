@@ -25,12 +25,24 @@
     line-height: 1.2;
   }
 
+  h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 200;
     margin-top: 0;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     line-height: 1.7;
+  }
+
+  a {
+    color: #ff6600;
   }
 
   ul {
@@ -47,9 +59,39 @@
     }
   }
 
+  hr {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  em {
+    font-style: italic;
+  }
+
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  blockquote {
+    padding: 11px 22px;
+    margin: 0 0 22px;
+    font-size: 1.2rem;
+    border-left: 5px solid #eee;
+
+    p {
+      font-size: 1.2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   twitterwidget {
