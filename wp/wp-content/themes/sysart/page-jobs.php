@@ -19,7 +19,7 @@ get_header();
   </div>
 </div>
 <div class="block">
-  <div class="block__content text text--medium">
+  <div class="block__content text text--medium wysiwyg">
     <?php the_content(); ?>
   </div>
 </div>

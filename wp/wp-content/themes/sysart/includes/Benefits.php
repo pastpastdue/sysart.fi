@@ -8,19 +8,17 @@ class Benefits {
     $benefits = '';
 
     foreach ($this->benefits as $benefit) {
-      $image = wp_get_attachment_image($benefit['image'], array(768, 0), false, array('class' => 'item__image'));
+      $image = wp_get_attachment_image($benefit['image'], array(768, 0), false, array('class' => 'item__image item__icon'));
 
       $benefits .= <<<EOC
         <div class="col-xs-6 col-md-4 col-lg-2">
           <div class="item item--square">
-            <a href="$url">
               <div class="item__content">
                 $image
-                <div class="item__title">
+                <div class="title--icon">
                   {$benefit['benefit']}
                 </div>
               </div>
-            </a>
           </div>
         </div>
 EOC;

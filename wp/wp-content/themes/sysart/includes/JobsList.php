@@ -17,7 +17,7 @@ class JobsList {
   <div class="item item--small-margin item--square">
     <a href="$url" class="button">
       <div class="item__content">
-        <h1 class="title title--small">
+        <h1 class="title title--small title--margin-double">
           {$job->post_title}
         </h1>
         <p>{$job->post_excerpt}</p>
