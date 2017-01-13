@@ -11,7 +11,7 @@ class Benefits {
       $image = wp_get_attachment_image($benefit['image'], array(768, 0), false, array('class' => 'item__image item__icon'));
 
       $benefits .= <<<EOC
-        <div class="col-xs-6 col-md-4 col-lg-2">
+        <div class="col-tn-6 col-xs-6 col-sm-3 col-md-3 col-lg-3">
           <div class="item item--square">
               <div class="item__content">
                 $image
