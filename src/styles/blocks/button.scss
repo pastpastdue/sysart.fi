@@ -21,6 +21,17 @@
   }
 }
 
+.button--reverse {
+  color: white;
+  border: none;
+  background: $color-brand;
+
+  &:hover {
+    color: white;
+    opacity: 0.7;
+  }
+}
+
 .button--dark {
   color: $text-color-normal;
 }
