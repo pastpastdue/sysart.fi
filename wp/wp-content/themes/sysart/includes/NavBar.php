@@ -14,7 +14,6 @@ class NavBar {
     $logo = wp_get_attachment_image(get_field('logo', $frontpage), thumbnail, false, array('class' => 'image image--responsive'));
 
     $items = wp_nav_menu(array(
-      'walker' => new CustomWalker(),
       'echo' => false,
       'container' => null,
       'menu_id' => $container_id,
