@@ -166,6 +166,31 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_58788f74dbac4",
+            "label": "Other services",
+            "name": "other_services",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "service"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "id"
         }
     ],
     "location": [
@@ -185,5 +210,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1480594675
+    "modified": 1484296114
 }
