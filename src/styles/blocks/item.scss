@@ -1,3 +1,4 @@
+@import 'mixins';
 @import 'variables';
 
 .item {
@@ -16,30 +17,7 @@
 }
 
 .item--square {
-  &:before {
-    content: '';
-    display: block;
-    padding-top: 100%;
-    padding-bottom: 0;
-  }
-
-  .item__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    margin: 0;
-    width: 90%;  
-  }
-
-  > a {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
+  @include item--square;
 }
 
 .item--center {
