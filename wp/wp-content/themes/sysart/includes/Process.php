@@ -11,7 +11,7 @@ class Process {
   <div class="item item--background item--square $bg">
   </div>
   <div class="item__content text--center">
-    <div class="title title--small title--margin title--extra-line-height">
+    <div class="title title--extra-small title--margin title--extra-line-height">
       {$step['title']}
     </div>
     <p class="text--extra-line-height">{$step['text']}</p>
