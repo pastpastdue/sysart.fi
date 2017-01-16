@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'mixins';
+
+.jobs-list {
+
+  article:nth-of-type(4n+1) {
+    .item {
+      @include gradient-vertical(#FF8818, #F06712);
+    }
+  }
+
+  article:nth-of-type(4n+2) {
+    .item {
+      @include gradient-vertical(#FCDB57, #FAA42F);
+    }
+  }
+
+  article:nth-of-type(4n+3) {
+    .item {
+      @include gradient-vertical(#FA6700, #E14707);
+    }
+  }
+
+  article:nth-of-type(4n+4) {
+    .item {
+      @include gradient-vertical(#FCDB57, #FAA42F);
+    }
+  }
+
+  a {
+    color: $text-color-white;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    display: inline-block;
+    background: none;
+    outline: none;
+    user-select: none;
+
+    &:hover {
+      color: $text-color-white;
+      background: rgba(255, 255, 255, 0.1);
+
+      .item__image {
+        max-width: 75%;
+      }
+    }
+  }
+}
+

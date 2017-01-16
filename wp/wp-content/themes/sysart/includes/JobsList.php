@@ -15,7 +15,7 @@ class JobsList {
       $content .= <<<EOC
 <article class="col-xs-6 col-sm-4 col-md-3">
   <div class="item item--small-margin item--square">
-    <a href="$url" class="button button--reverse">
+    <a href="$url">
       <div class="item__content">
         <h1 class="title title--small title--margin-double">
           {$job->post_title}
@@ -29,7 +29,7 @@ EOC;
     }
 
     return <<<EOC
-<div class="block">
+<div class="block jobs-list">
   <div class="row row--center">
     $content
   </div>
