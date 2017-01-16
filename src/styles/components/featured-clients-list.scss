@@ -6,6 +6,8 @@
       flex-direction: row-reverse;
     }
 
-    @include item--square;
+    .item--text {
+      @include item--square;
+    }
   }
 }
