@@ -4,6 +4,7 @@
  */
 
 the_post();
+$other_clients_list = Utils::getMinimalClientList();
 $team_list = new PeopleList(get_field('employees'), true);
 $hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
 $team_title = get_field('team_title');
@@ -30,4 +31,5 @@ get_header();
   </div>
 </div>
 <?php echo new AddThis(); ?>
+<?php echo $other_clients_list; ?>
 <?php get_footer(); ?>
