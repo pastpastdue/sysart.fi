@@ -48,7 +48,7 @@ get_header();
   </div>
 </div>
 <div class="block block--full-width block--condensed-top">
-  <div class="block__content">
+  <div class="block__content block__content--condensed-bottom">
     <?php echo $featured_blog_list; ?>
   </div>
 </div>
