@@ -23,7 +23,11 @@ get_header();
     <?php the_content(); ?>
   </div>
 </div>
+<div class="block block--condensed-top block--condensed-bottom">
+  <div class="block__content">
 <?php echo new Benefits(get_field('benefits')); ?>
+  </div>
+</div>
 <div class="block block--condensed-bottom">
   <div class="block__content">
     <h2 class="title title--medium">
