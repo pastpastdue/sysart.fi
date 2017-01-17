@@ -191,22 +191,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_58120bb61e22b",
-            "label": "Disable Link to client page",
-            "name": "disable_link",
-            "type": "true_false",
-            "instructions": "Est\u00e4\u00e4 kuvan linkittymisen asiakkaan sivulle. Esimerkiksi \"Tulossa Pian!\" -asiakkaissa joita ei haluta linkittyv\u00e4n.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0
-        },
-        {
             "key": "field_582c3aa5a6597",
             "label": "Frontpage title",
             "name": "frontpage_title",
@@ -262,5 +246,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484648251
+    "modified": 1484648798
 }
