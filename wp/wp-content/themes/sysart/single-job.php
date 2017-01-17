@@ -13,4 +13,5 @@ the_post();
     <?php the_content(); ?>
   </div>
 </div>
+<?php echo new AddThis(); ?>
 <?php get_footer(); ?>
