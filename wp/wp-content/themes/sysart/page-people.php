@@ -1,26 +1,24 @@
 <?php
 /**
  * Template Name: People
- *
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage sysart
- * @since sysart
  */
-$fields = get_fields();
+
+//$hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
+
+$employees = get_posts(array(
+  'post_type' => 'employee',
+  'orderby' => 'menu_order',
+  'numberposts' => -1
+));
+
+$people_list = new PeopleList($employees);
 
 get_header();
 ?>
-<div class="container">
-  <section class="content-section">
-    <div class="title">
-      <h1><?php echo $post->post_title; ?></h1>
-    </div>
-    <div class="content">
-      <?php echo Utils::getPeople(null, array('displayPhonenumbers' => true)); ?>
-    </div>
-  </section>
+<div class="hero block">
+  <div class="block__content block--light">
+    <h1 class="hero__title"><?php the_title(); ?></h1>
+  </div>
 </div>
+<?php echo $people_list; ?>
 <?php get_footer(); ?>

@@ -1,12 +1,12 @@
 {
-    "key": "group_5850f3daa6c48",
+    "key": "group_582c419177207",
     "title": "Share info",
     "fields": [
         {
-            "key": "field_5850f3e1a3d59",
-            "label": "Share text",
-            "name": "share_text",
-            "type": "textarea",
+            "key": "field_582c419e9d6b9",
+            "label": "Share title",
+            "name": "share_title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -17,12 +17,12 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "prepend": "",
+            "append": "",
+            "maxlength": 70
         },
         {
-            "key": "field_5850f3f1a3d5a",
+            "key": "field_582c41a99d6ba",
             "label": "Share image",
             "name": "share_image",
             "type": "image",
@@ -34,7 +34,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "id",
             "preview_size": "thumbnail",
             "library": "all",
             "min_width": "",
@@ -46,9 +46,28 @@
             "mime_types": ""
         },
         {
-            "key": "field_5850f410a3d5b",
-            "label": "Share title",
-            "name": "share_title",
+            "key": "field_582c41c09d6bb",
+            "label": "Share text",
+            "name": "share_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 300
+        },
+        {
+            "key": "field_582c41c99d6bc",
+            "label": "Meta description",
+            "name": "meta_description",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -65,10 +84,29 @@
             "maxlength": ""
         },
         {
-            "key": "field_5850f437a3d5c",
+            "key": "field_582c41d29d6bd",
+            "label": "Meta keywords",
+            "name": "meta_keywords",
+            "type": "text",
+            "instructions": "Comma separated",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_58411aa286728",
             "label": "Twitter text",
             "name": "twitter_text",
-            "type": "textarea",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -79,17 +117,17 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "prepend": "",
+            "append": "",
+            "maxlength": 200
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
-                "operator": "==",
-                "value": "job"
+                "param": "post_status",
+                "operator": "!=",
+                "value": "trash"
             }
         ]
     ],
@@ -101,5 +139,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1481700600
+    "modified": 1480667033
 }

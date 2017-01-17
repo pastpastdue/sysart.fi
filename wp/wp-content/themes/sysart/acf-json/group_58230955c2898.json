@@ -1,6 +1,6 @@
 {
     "key": "group_58230955c2898",
-    "title": "clients",
+    "title": "Client Page",
     "fields": [
         {
             "key": "field_5773e4538b208",
@@ -15,41 +15,22 @@
                 "class": "",
                 "id": ""
             },
+            "return_format": "id",
             "preview_size": "thumbnail",
             "library": "all",
-            "return_format": "array",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
             "mime_types": ""
         },
         {
-            "key": "field_5773e4618b209",
-            "label": "description",
-            "name": "description",
-            "type": "textarea",
-            "instructions": "short text",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "br"
-        },
-        {
-            "key": "field_5773e4778b20a",
-            "label": "text",
-            "name": "text",
-            "type": "wysiwyg",
+            "key": "field_587789359fbba",
+            "label": "Team title",
+            "name": "team_title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -59,13 +40,14 @@
                 "id": ""
             },
             "default_value": "",
-            "toolbar": "full",
-            "media_upload": 0,
-            "tabs": "all"
+            "placeholder": "esim. \"Projektin tiimi\"",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5773e4858b20b",
-            "label": "employees",
+            "label": "Team employees",
             "name": "employees",
             "type": "relationship",
             "instructions": "",
@@ -76,7 +58,6 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
             "post_type": [
                 "employee"
             ],
@@ -84,27 +65,10 @@
             "filters": [
                 "search"
             ],
+            "elements": "",
+            "min": "",
             "max": "",
-            "min": 0,
-            "elements": [
-                "post_type"
-            ]
-        },
-        {
-            "key": "field_5777779f35ff9",
-            "label": "full preview",
-            "name": "full_preview",
-            "type": "true_false",
-            "instructions": "Preview etusivulla feat texti",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0
+            "return_format": "id"
         },
         {
             "key": "field_577a97de966e9",
@@ -121,33 +85,6 @@
             },
             "message": "",
             "default_value": 0
-        },
-        {
-            "key": "field_57a0fad634fb8",
-            "label": "key numbers",
-            "name": "key_numbers",
-            "type": "relationship",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "object",
-            "post_type": [
-                "keynumbers"
-            ],
-            "taxonomy": [],
-            "filters": [
-                "search"
-            ],
-            "max": "",
-            "min": 0,
-            "elements": [
-                "post_type"
-            ]
         },
         {
             "key": "field_57adacfe3b38b",
@@ -254,10 +191,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_57c516a1f7de2",
-            "label": "related articles",
-            "name": "related",
-            "type": "relationship",
+            "key": "field_582c3aa5a6597",
+            "label": "Frontpage title",
+            "name": "frontpage_title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -266,30 +203,18 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
-            "post_type": [
-                "blog",
-                "article",
-                "news",
-                "client",
-                "service"
-            ],
-            "taxonomy": [],
-            "filters": [
-                "search"
-            ],
-            "max": "",
-            "min": 0,
-            "elements": [
-                "post_type"
-            ]
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
-            "key": "field_58120bb61e22b",
-            "label": "Disable Link to client page",
-            "name": "disable_link",
-            "type": "true_false",
-            "instructions": "Est\u00e4\u00e4 kuvan linkittymisen asiakkaan sivulle. Esimerkiksi \"Tulossa Pian!\" -asiakkaissa joita ei haluta linkittyv\u00e4n.",
+            "key": "field_582c3ab2a6598",
+            "label": "Frontpage subtitle",
+            "name": "frontpage_subtitle",
+            "type": "text",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -297,8 +222,11 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -318,5 +246,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1479126088
+    "modified": 1484648798
 }

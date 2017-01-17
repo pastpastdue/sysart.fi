@@ -1,0 +1,23 @@
+@import 'mixins';
+
+.image {
+
+}
+
+.image--responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.image--center {
+  margin: 0 auto;
+}
+
+.image.image--floater {
+  @include use-up('sm') {
+    float: right;
+    max-width: 300px;
+    margin-left: 1rem;
+  }
+}

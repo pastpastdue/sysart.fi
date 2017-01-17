@@ -1,42 +1,33 @@
 <?php
 /**
  * Template Name: Clients
- *
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage sysart
- * @since sysart
  */
+$hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
+
+$clients_list = new ClientsList(get_field('featured_clients'));
+$other_clients_list = new OtherClientsList(get_field('other_clients'));
+
 get_header();
 
-$post = get_post();
-$fields = get_fields();
-
-// $f = new FilterList($filters);
-
+the_post();
 ?>
-<div class="container">
-  <section class="content-section page-clients">
-    <div class="title">
-      <h1><?php echo $post->post_title; ?></h1>
-    </div>
-    <div class="content">
-      <?php
-      echo Utils::getClientsList(false, '', array(), false, false);
-      ?>
-      <div class="clientlist-wrapper">
-        <div class="title">
-          <h1>Muita asiakkaitamme</h1>
-        </div>
-        <?php
-        echo Utils::getMinimalClientList();
-        ?>
-      </div>
-    </div>
-  </section>
+<div class="hero block <?php echo $hero_bg; ?>">
+  <div class="block__content">
+    <h1 class="hero__title"><?php the_title(); ?></h1>
+  </div>
 </div>
-<?php
-get_footer();
-?>
+<div class="block wysiwyg">
+  <div class="block__content text text--medium">
+    <?php the_content(); ?>
+  </div>
+</div>
+<?php echo $clients_list; ?>
+<div class="block block--condensed-bottom">
+  <div class="block__content">
+    <h2 class="title title--medium">
+      Muita asiakkaitamme
+    </h2>
+  </div>
+</div>
+<?php echo $other_clients_list; ?>
+<?php get_footer(); ?>

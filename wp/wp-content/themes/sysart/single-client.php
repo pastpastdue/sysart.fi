@@ -1,48 +1,35 @@
 <?php
 /**
  * Template Name: Service
- *
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage sysart
- * @since sysart
  */
+
+the_post();
+$other_clients_list = Utils::getMinimalClientList();
+$team_list = new PeopleList(get_field('employees'), true);
+$hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
+$team_title = get_field('team_title');
+
 get_header();
-
-$post = get_post();
-$fields = get_fields();
-
-//echo '<pre>', print_r($fields), '</pre>';
-
-$image = $fields['jumbotron_image'] ? $fields['jumbotron_image'] : $fields['image'];
-
 ?>
-<?php echo new OverflowJumbotron($image, $fields['jumbotron_text']); ?>
-<?php echo new CaseNumbers($fields['key_numbers']); ?>
-<div class="container">
-  <section class="content-section">
-    <div class="bold-title">
-      <h1><?php echo $post->post_title; ?></h1>
-    </div>
-    <div class="content post-content">
-      <?php echo $fields['text']; ?>
-    </div>
-      <?php
-        $p = $fields['employees'] ? new PersonList(array('items' => $fields['employees'])) : '';
-        echo $p;
-      ?>
-
-      <?php
-
-        $related = $fields['related'] ? new RelatedPostList($fields['related']) : '';
-        echo $related;
-
-      ?>
-  </section>
+<div class="hero block <?php echo $hero_bg; ?>">
 </div>
-<?php
-    echo new AddThis();
-    get_footer();
-?>
+<div class="block block--text wysiwyg">
+  <div class="block__content">
+    <?php the_content(); ?>
+  </div>
+</div>
+<?php if($team_title): ?>
+<div class="block block--full-width block--condensed-top block--condensed-bottom">
+  <div class="block__content">
+    <h2 class="title title--medium title--margin"><?php echo $team_title; ?></h2>
+  </div>
+</div>
+<?php endif; ?>
+<div class="block block--full-width block--condensed-bottom">
+  <div class="block__content">
+    <?php echo $team_list; ?>
+  </div>
+</div>
+<?php echo new AddThis(); ?>
+<?php echo $other_clients_list; ?>
+<?php get_footer(); ?>

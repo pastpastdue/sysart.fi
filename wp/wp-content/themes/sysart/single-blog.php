@@ -1,47 +1,41 @@
 <?php
 /**
  * Template Name: Service
- *
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage sysart
- * @since sysart
  */
+
+the_post();
+
+$hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
+
+$people_list = new PeopleList(get_field('author'), true);
+$related_articles = get_field('related_articles');
+$blog_list = $related_articles ? new BlogList($related_articles, true) : '';
+
 get_header();
 
 $post = get_post();
 $fields = get_fields();
 
-//echo '<pre>', print_r($fields), '</pre>';
-
 $image = $fields['jumbotron_image'] ? $fields['jumbotron_image'] : $fields['image'];
-
 ?>
-<?php echo new OverflowJumbotron($image, $fields['jumbotron_text']); ?>
-<div class="container">
-  <section class="content-section">
-    <div class="bold-title">
-      <h1><?php echo $post->post_title; ?></h1>
-    </div>
-    <div class="content post-content">
-      <?php echo $fields['content']; ?>
-    </div>
-      <?php
-        $p = $fields['author'] ? new PersonList(array('items' => $fields['author'])) : '';
-        echo $p;
-      ?>
-
-      <?php
-
-      $related = $fields['related_articles'] ? new RelatedPostList($fields['related_articles']) : '';
-      echo $related;
-
-      ?>
-  </section>
+<div class="hero block <?php echo $hero_bg; ?>">
 </div>
-<?php
-    echo new AddThis();
-    get_footer();
-?>
+<div class="block block--text wysiwyg">
+  <div class="block__content">
+    <h1 class="title title--large"><?php the_title(); ?></h1>
+    <?php the_content(); ?>
+  </div>
+</div>
+<?php echo $people_list; ?>
+<?php if ($related_articles): ?>
+  <div class="block block--condensed-bottom">
+    <div class="block__content">
+      <h2 class="title title--medium">
+        Lue myös
+      </h2>
+    </div>
+  </div>
+  <?php echo $blog_list; ?>
+<?php endif; ?>
+<?php echo new AddThis(); ?>
+<?php get_footer(); ?>

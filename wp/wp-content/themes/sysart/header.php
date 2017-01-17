@@ -26,10 +26,8 @@ $fields = get_fields($frontpage->ID);
     <link rel="icon" href="<?php  echo get_template_directory_uri(); ?>/favicon.ico">
 
     <title><?php the_title(); ?></title>
-    <?php
-    echo new Social(get_fields(), $post);
-    wp_head();
-    ?>
+    <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-    <?php echo new MainMenu('header-menu'); ?>
+    <div id="wrapper">
+      <?php echo new NavBar(); ?>

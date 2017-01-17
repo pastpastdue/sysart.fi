@@ -1,10 +1,26 @@
 {
     "key": "group_5823095623696",
-    "title": "employees",
+    "title": "Employee post",
     "fields": [
         {
-            "key": "field_5773e654df8d6",
-            "label": "image",
+            "key": "field_5832aa85c04f0",
+            "label": "General",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5832b29a72c4b",
+            "label": "Image",
             "name": "image",
             "type": "image",
             "instructions": "",
@@ -15,20 +31,20 @@
                 "class": "",
                 "id": ""
             },
+            "return_format": "id",
             "preview_size": "thumbnail",
             "library": "all",
-            "return_format": "array",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
             "mime_types": ""
         },
         {
             "key": "field_5773e61edf8d2",
-            "label": "title",
+            "label": "Title",
             "name": "title",
             "type": "text",
             "instructions": "",
@@ -43,12 +59,11 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": ""
         },
         {
             "key": "field_5773e629df8d3",
-            "label": "phone",
+            "label": "Phone",
             "name": "phone",
             "type": "text",
             "instructions": "",
@@ -63,12 +78,11 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": ""
         },
         {
             "key": "field_5773e637df8d4",
-            "label": "email",
+            "label": "Email",
             "name": "email",
             "type": "text",
             "instructions": "",
@@ -79,18 +93,17 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "@sysart.fi",
+            "default_value": "",
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": ""
         },
         {
-            "key": "field_5773e646df8d5",
-            "label": "description",
-            "name": "description",
-            "type": "textarea",
+            "key": "field_5832a98664101",
+            "label": "Social",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -99,36 +112,15 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "br"
-        },
-        {
-            "key": "field_5773e665df8d7",
-            "label": "text",
-            "name": "text",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "toolbar": "full",
-            "media_upload": 1,
-            "tabs": "all"
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_57dd858412c3f",
-            "label": "linkedin profile link",
+            "label": "LinkedIn",
             "name": "link_linkedin",
             "type": "text",
-            "instructions": "linkedin link",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -140,12 +132,11 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": ""
         },
         {
             "key": "field_57dd859812c40",
-            "label": "twitter profile link",
+            "label": "Twitter",
             "name": "link_twitter",
             "type": "text",
             "instructions": "",
@@ -160,12 +151,11 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": ""
         },
         {
             "key": "field_57dd85c512c41",
-            "label": "github profile link",
+            "label": "GitHub",
             "name": "link_github",
             "type": "text",
             "instructions": "",
@@ -180,12 +170,11 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": ""
         },
         {
             "key": "field_57dd85d512c42",
-            "label": "homepage link",
+            "label": "Homepage",
             "name": "link_homepage",
             "type": "text",
             "instructions": "",
@@ -200,7 +189,6 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": ""
         }
     ],
@@ -218,10 +206,8 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "excerpt"
-    ],
+    "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1479126145
+    "modified": 1479717558
 }

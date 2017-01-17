@@ -8,7 +8,7 @@ add_action('init', function () {
       ),
       'public' => true,
       'has_archive' => false,
-      'supports' => array('title', 'excerpt', 'thumbnail'),
+      'supports' => array('title', 'excerpt', 'thumbnail', 'editor'),
       'taxonomies' => array('post_tag'),
       'rewrite' => array(
         'slug' => 'blogi'
@@ -37,7 +37,7 @@ add_action('init', function () {
       ),
       'public' => true,
       'has_archive' => false,
-      'supports' => array('title', 'thumbnail'),
+      'supports' => array('title', 'excerpt', 'thumbnail', 'editor'),
       'taxonomies' => array('post_tag'),
       'rewrite' => array(
         'slug' => 'tekijat'
@@ -66,7 +66,7 @@ add_action('init', function () {
       ),
       'public' => true,
       'has_archive' => false,
-      'supports' => array('title', 'excerpt', 'thumbnail'),
+      'supports' => array('title', 'excerpt', 'thumbnail', 'editor'),
       'taxonomies' => array('post_tag'),
       'rewrite' => array(
         'slug' => 'asiakkaat'
@@ -98,37 +98,11 @@ add_action('init', function () {
       ),
       'public' => true,
       'has_archive' => false,
-      'supports' => array( 'title', 'excerpt', 'thumbnail', 'editor'),
+      'supports' => array('title', 'excerpt', 'thumbnail', 'editor'),
       'taxonomies' => array('post_tag'),
       'rewrite' => array(
         'slug' => 'tyopaikat'
       )
-    )
-  );
-
-  register_post_type('contactinfo',
-    array(
-      'labels' => array(
-        'name' => __('Contact Info'),
-        'singular_name' => __('Contact Info'),
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'supports' => array('title', 'excerpt', 'thumbnail', 'editor'),
-      'taxonomies' => array('post_tag'),
-    )
-  );
-
-  register_post_type('processes',
-    array(
-      'labels' => array(
-        'name' => __('Processes'),
-        'singular_name' => __('Process'),
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'supports' => array('title', 'editor'),
-      'taxonomies' => array('post_tag'),
     )
   );
 

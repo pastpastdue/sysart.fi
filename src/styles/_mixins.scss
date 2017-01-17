@@ -1,12 +1,7 @@
-$responsive-sizes: (
-  xs: $screen-xs-min $screen-xs-max,
-  sm: $screen-sm-min $screen-sm-max,
-  md: $screen-md-min $screen-md-max,
-  lg: $screen-lg-min 0
-);
+@import 'variables';
 
 @mixin use-up($size) {
-  $sizes: map-get($responsive-sizes, $size);
+  $sizes: map-get($breakpoints, $size);
 
   @media (min-width: nth($sizes, 1)) {
     @content;
@@ -14,9 +9,40 @@ $responsive-sizes: (
 }
 
 @mixin use-down($size) {
-  $sizes: map-get($responsive-sizes, $size);
+  $sizes: map-get($breakpoints, $size);
 
   @media (max-width: nth($sizes, 1) - 1px) {
     @content;
+  }
+}
+
+@mixin gradient-vertical($from, $to) {
+  background: linear-gradient(to bottom, $from, $to);
+}
+
+@mixin item--square() {
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+    padding-bottom: 0;
+  }
+
+  .item__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin: 0;
+    width: 90%;
+  }
+
+  > a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 }

@@ -169,18 +169,26 @@ class Utils {
   }
 
   public static function getMinimalClientList() {
+    $current_post_id = get_the_ID();
     $args = array(
       'numberposts'	=> -1,
-      'post_type'		=> 'client',
-      'meta_key'		=> 'footer_preview',
-      'meta_value'	=> true
-  );
+      'post_type'	=> 'client',
+      'meta_query'  => array(
+        'relation'    => 'AND',
+        array(
+          'key'    => 'footer_preview',
+          'value'	=> '1',
+          'compare'     => '=',
+        ),
+      ),
+    );
 
     $posts = get_posts( $args );
     self::postSort($posts);
 
-    return new MinimalClientList($posts);
+    return new MinimalClientList($posts, $current_post_id);
   }
+
 
   /**
    * get person post and fields
@@ -221,7 +229,7 @@ class Utils {
       return $posts;
   }
 
-  public static function getJobsList() {
+  public static function getJobs() {
     $args = array(
       'orderby'          => 'menu_order',
       'order'            => 'DESC',
@@ -233,6 +241,6 @@ class Utils {
     $posts = get_posts($args);
     self::postSort($posts);
 
-    return new JobsList($posts);
+    return $posts;
   }
 }

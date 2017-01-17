@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_57c514ae61f21",
-            "label": "description",
+            "label": "Description",
             "name": "description",
             "type": "text",
             "instructions": "",
@@ -19,12 +19,11 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": ""
         },
         {
             "key": "field_57c514b961f22",
-            "label": "jumbotron text",
+            "label": "Jumbotron text",
             "name": "jumbotron_text",
             "type": "text",
             "instructions": "",
@@ -39,12 +38,11 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": ""
         },
         {
             "key": "field_57c514c561f23",
-            "label": "jumbotron image",
+            "label": "Jumbotron image",
             "name": "image",
             "type": "image",
             "instructions": "",
@@ -55,20 +53,20 @@
                 "class": "",
                 "id": ""
             },
+            "return_format": "id",
             "preview_size": "thumbnail",
             "library": "all",
-            "return_format": "array",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
             "mime_types": ""
         },
         {
             "key": "field_57c514d861f24",
-            "label": "content",
+            "label": "content (REMOVE)",
             "name": "content",
             "type": "wysiwyg",
             "instructions": "",
@@ -80,13 +78,13 @@
                 "id": ""
             },
             "default_value": "",
+            "tabs": "all",
             "toolbar": "full",
-            "media_upload": 1,
-            "tabs": "all"
+            "media_upload": 1
         },
         {
             "key": "field_57c514ef61f25",
-            "label": "author",
+            "label": "Authors",
             "name": "author",
             "type": "relationship",
             "instructions": "",
@@ -97,7 +95,6 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
             "post_type": [
                 "employee"
             ],
@@ -105,15 +102,14 @@
             "filters": [
                 "search"
             ],
+            "elements": "",
+            "min": "",
             "max": "",
-            "min": 0,
-            "elements": [
-                "post_type"
-            ]
+            "return_format": "id"
         },
         {
             "key": "field_57c5150c61f26",
-            "label": "related articles",
+            "label": "Rrelated articles",
             "name": "related_articles",
             "type": "relationship",
             "instructions": "",
@@ -124,7 +120,6 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
             "post_type": [
                 "blog"
             ],
@@ -132,114 +127,10 @@
             "filters": [
                 "search"
             ],
+            "elements": "",
+            "min": "",
             "max": "",
-            "min": 0,
-            "elements": [
-                "post_type"
-            ]
-        },
-        {
-            "key": "field_57cc5fb6e2434",
-            "label": "share text",
-            "name": "share_text",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "br"
-        },
-        {
-            "key": "field_57cc5fcae2435",
-            "label": "share image",
-            "name": "share_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "preview_size": "thumbnail",
-            "library": "all",
-            "return_format": "array",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": ""
-        },
-        {
-            "key": "field_57cc5ff1e2436",
-            "label": "share title",
-            "name": "share_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "formatting": "html",
-            "maxlength": ""
-        },
-        {
-            "key": "field_57ce87aa1e457",
-            "label": "twitter text",
-            "name": "twitter_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "formatting": "html",
-            "maxlength": ""
-        },
-        {
-            "key": "field_57ce87b11e458",
-            "label": "twitter tags",
-            "name": "twitter_tags",
-            "type": "text",
-            "instructions": "comma separated list\r\nkissa, koira, jorma",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "formatting": "html",
-            "maxlength": ""
+            "return_format": "id"
         }
     ],
     "location": [
@@ -253,11 +144,11 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1479126067
+    "modified": 1480604758
 }

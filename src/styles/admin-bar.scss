@@ -1,0 +1,18 @@
+$height-wp-admin: 32px;
+$height-wp-admin-mobile: 46px;
+
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed !important;
+  }
+}
+
+.admin-bar {
+  .nav-bar {
+    top: $height-wp-admin;
+
+    @media screen and (max-width: 782px) {
+      top: $height-wp-admin-mobile;
+    }
+  }
+}
