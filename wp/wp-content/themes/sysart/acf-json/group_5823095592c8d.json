@@ -3,44 +3,6 @@
     "title": "Blog post",
     "fields": [
         {
-            "key": "field_57c514ae61f21",
-            "label": "Description",
-            "name": "description",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_57c514b961f22",
-            "label": "Jumbotron text",
-            "name": "jumbotron_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_57c514c561f23",
             "label": "Jumbotron image",
             "name": "image",
@@ -63,24 +25,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_57c514d861f24",
-            "label": "content (REMOVE)",
-            "name": "content",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1
         },
         {
             "key": "field_57c514ef61f25",
@@ -109,7 +53,7 @@
         },
         {
             "key": "field_57c5150c61f26",
-            "label": "Rrelated articles",
+            "label": "Related articles",
             "name": "related_articles",
             "type": "relationship",
             "instructions": "",
@@ -150,5 +94,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1480604758
+    "modified": 1484659165
 }

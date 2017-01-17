@@ -28,26 +28,6 @@
             "elements": [
                 "post_type"
             ]
-        },
-        {
-            "key": "field_5800c620ae07f",
-            "label": "Pipedrive form ID",
-            "name": "pipedrive_form_id",
-            "type": "text",
-            "instructions": "Pipedrive lomakkeen ID. Lomakkeen luonnin yhteydess\u00e4 tulevasta urlista, ID osuus esim. \"https:\/\/pipedrivewebforms.com\/form\/127dbe1fb535cf55782b22fc6617ac5d\" ID on \"127dbe1fb535cf55782b22fc6617ac5d\"",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "formatting": "html",
-            "maxlength": ""
         }
     ],
     "location": [
@@ -67,5 +47,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1479126125
+    "modified": 1484660776
 }
