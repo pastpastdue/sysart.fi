@@ -1,7 +1,7 @@
 <?php
 class ReferenceView {
   public function __construct($post_id, $title, $text) {
-    $link = get_post_permalink($this->post_id);
+    $link = get_post_permalink($post_id);
     $background = StyleInjector::addBackground(get_post_thumbnail_id($post_id));
 
     $this->content = <<<EOC
