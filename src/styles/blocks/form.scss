@@ -1,0 +1,35 @@
+@import 'mixins';
+@import 'variables';
+
+input, textarea {
+  border: 1px solid $border-color;
+  box-shadow: inset 0px 0px 0px 0px white;
+  font-size: 1rem;
+  font-weight: 200;
+  outline: none;
+  padding: 0.6rem;
+
+  &:focus {
+    border-color: $color-brand;
+  }
+}
+
+input {
+  height: 2.5rem;
+
+  @include use-down('sm') {
+    height: 3.8rem;
+  }
+}
+
+textarea {
+  height: 10rem;
+}
+
+input[type='submit'] {
+  font-family: 'Campton', sans-serif;
+  width: auto;
+  line-height: 16px;
+  height: auto;
+  margin-top: 1.5rem;
+}
