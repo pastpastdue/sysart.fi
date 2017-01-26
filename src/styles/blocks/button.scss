@@ -1,6 +1,6 @@
 @import 'variables';
 
-.button {
+.button, input[type='submit'] {
   font-size: 16px;
   color: $color-brand;
   border: 1px solid $color-brand;

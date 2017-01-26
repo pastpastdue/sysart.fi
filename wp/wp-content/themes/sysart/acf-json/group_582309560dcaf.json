@@ -28,6 +28,63 @@
             "min": "",
             "max": "",
             "return_format": "id"
+        },
+        {
+            "key": "field_58820f83b4122",
+            "label": "Contact form title",
+            "name": "contact_form_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_58821097b1eca",
+            "label": "Contact form subtitle",
+            "name": "contact_form_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_588210c7af8a2",
+            "label": "Contact form text",
+            "name": "contact_form_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -47,5 +104,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1480605454
+    "modified": 1484919010
 }

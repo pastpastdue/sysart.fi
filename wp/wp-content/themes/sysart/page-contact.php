@@ -35,4 +35,26 @@ get_header();
   </div>
 </div>
 <?php echo $people_list; ?>
+<div class="block block--large block--condensed-bottom">
+  <div class="block__content child-margins">
+    <h2 class="title title--highlight"><?php the_field('contact_form_title'); ?></h2>
+    <p class="title title--medium"><?php the_field('contact_form_subtitle'); ?></p>
+    <p><?php the_field('contact_form_text'); ?></p>
+  </div>
+</div>
+<div class="block block--condensed-top">
+  <div class="block__content">
+    <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+    <script>
+      hbspt.forms.create({
+        css: '',
+        portalId: '2685480',
+        formId: 'd9edee91-632c-497f-8180-4db95404ac01'
+      });
+    </script>
+  </div>
+</div>
 <?php get_footer(); ?>

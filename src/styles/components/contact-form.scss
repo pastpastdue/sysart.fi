@@ -1,0 +1,41 @@
+@import 'mixins';
+@import 'variables';
+
+.hbspt-form {
+  form {
+    &.hs-form {
+      fieldset {
+        max-width: none;
+        text-align: left;
+        padding: 0.6rem;
+
+        label {
+          line-height: 2;
+          font-weight: 400;
+        }
+
+        input, textarea {
+          &.hs-input {
+            width: 100%;
+          }
+        }
+
+        @include use-down('sm') {
+          & > .hs-form-field {
+            float: none;
+            width: 100%;
+          }
+        }
+      }
+
+      ul {
+        font-size: 0.7rem;
+        color: $color-brand;
+
+        @include use-down('sm') {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
