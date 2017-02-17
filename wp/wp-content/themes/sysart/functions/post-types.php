@@ -16,6 +16,22 @@ add_action('init', function () {
     )
   );
 
+    register_post_type('hubspotblog',
+        array(
+            'labels' => array(
+                'name' => __('Hubspot blog posts'),
+                'singular_name' => __('Hubspot blog post'),
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'supports' => array('title', 'excerpt', 'thumbnail'),
+            'taxonomies' => array('post_tag'),
+            'rewrite' => array(
+                'slug' => 'hubspot-blog'
+            )
+        )
+    );
+
   register_post_type('article',
     array(
       'labels' => array(

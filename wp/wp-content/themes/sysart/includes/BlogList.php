@@ -6,9 +6,9 @@ class BlogList {
 
     foreach ($blog_ids as $id) {
       $post = get_post($id);
-      $url = get_permalink($post);
+      $url = get_field('hubspot_blog_url', $id);
 
-      $background = StyleInjector::addBackground(get_field('image', $id));
+      $background = StyleInjector::addBackground(get_post_thumbnail_id($post));
 
       $this->blogs .= <<<EOC
 <article class="col-xs-12 col-sm-6 col-md-4">
