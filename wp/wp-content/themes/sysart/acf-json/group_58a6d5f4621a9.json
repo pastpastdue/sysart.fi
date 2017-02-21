@@ -1,0 +1,40 @@
+{
+    "key": "group_58a6d5f4621a9",
+    "title": "Hubspot blog post",
+    "fields": [
+        {
+            "key": "field_58a6d65d1c244",
+            "label": "Blog post URL on Hubspot",
+            "name": "hubspot_blog_url",
+            "type": "url",
+            "instructions": "The URL of the blog post on Hubspot",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "hubspotblog"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1487329068
+}
