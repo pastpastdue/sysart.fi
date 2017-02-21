@@ -430,7 +430,7 @@
                 "id": ""
             },
             "post_type": [
-                "blog"
+                "hubspotblog"
             ],
             "taxonomy": [],
             "filters": [
@@ -600,5 +600,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484141127
+    "modified": 1487329277
 }
