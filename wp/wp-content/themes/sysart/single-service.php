@@ -27,7 +27,7 @@ get_header();
 <?php echo $reference_window; ?>
 <div class="block block--condensed-bottom">
   <div class="block__content">
-    <h2 class="title title--medium">Muut palvelut</h2>
+    <h2 class="title title--medium">Palvelut</h2>
   </div>
 </div>
 <?php echo $other_services_list; ?>
