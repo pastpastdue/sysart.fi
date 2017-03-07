@@ -28,6 +28,16 @@
         }
       }
 
+      fieldset:first-of-type {
+        .hs-richtext {
+          padding-bottom: 2rem;
+          text-align: center;
+          font-size: 1.6rem;
+          font-weight: 600;
+          line-height: 2.4rem;
+        }
+      }
+
       ul {
         font-size: 0.7rem;
         color: $color-brand;
