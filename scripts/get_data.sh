@@ -58,6 +58,6 @@ then
 fi
 
 echo "--- Running search and replace ---"
-docker exec $WORDPRESS_CONTAINER php /srdb/srdb.cli.php -h mysql -n sysart_wp -u root -p root -s http://sysart.fi -r $REPLACE_URL
+docker exec $WORDPRESS_CONTAINER php /srdb/srdb.cli.php -h mysql -n sysart_wp -u root -p root -s https://sysart.fi -r $REPLACE_URL
 
 echo "--- DONE! ---"
