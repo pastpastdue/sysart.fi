@@ -117,17 +117,4 @@ add_action('init', function () {
       )
     )
   );
-
-  register_post_type('keynumbers',
-    array(
-      'labels' => array(
-        'name' => __('Key numbers'),
-        'singular_name' => __('Key number'),
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'supports' => array(),
-      'taxonomies' => array('post_tag'),
-    )
-  );
 });
