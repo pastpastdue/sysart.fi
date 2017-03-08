@@ -16,28 +16,15 @@ add_action('init', function () {
     )
   );
 
-    register_post_type('hubspotblog',
-        array(
-            'labels' => array(
-                'name' => __('Hubspot blog posts'),
-                'singular_name' => __('Hubspot blog post'),
-            ),
-            'public' => true,
-            'has_archive' => false,
-            'supports' => array('title', 'excerpt', 'thumbnail')
-        )
-    );
-
-  register_post_type('article',
+  register_post_type('hubspotblog',
     array(
       'labels' => array(
-        'name' => __('Articles'),
-        'singular_name' => __('Article'),
+        'name' => __('Hubspot blog posts'),
+        'singular_name' => __('Hubspot blog post'),
       ),
       'public' => true,
-      'has_archive' => true,
-      'supports' => array('title', 'excerpt', 'thumbnail'),
-      'taxonomies' => array('post_tag'),
+      'has_archive' => false,
+      'supports' => array('title', 'excerpt', 'thumbnail')
     )
   );
 
