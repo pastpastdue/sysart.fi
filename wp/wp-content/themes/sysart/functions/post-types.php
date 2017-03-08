@@ -57,19 +57,6 @@ add_action('init', function () {
     )
   );
 
-  register_post_type('news',
-    array(
-      'labels' => array(
-        'name' => __('News'),
-        'singular_name' => __('News'),
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'supports' => array('title', 'excerpt', 'thumbnail'),
-      'taxonomies' => array('post_tag'),
-    )
-  );
-
   register_post_type('client',
     array(
       'labels' => array(
