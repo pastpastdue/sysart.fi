@@ -1,17 +1,14 @@
 <?php
 class OtherClientsList {
-  public function __construct($client_ids) {
+  public function __construct($client_logos) {
     $this->clients = '';
 
-    foreach ($client_ids as $id) {
-      $post = get_post($id);
-      $url = get_permalink($post);
-
-      $background = StyleInjector::addBackground(get_field('image', $id));
+    foreach ($client_logos as $data) {
+      $background = StyleInjector::addBackground($data['logo']);
 
       $this->clients .= <<<EOC
 <section class="col-xs-6 col-sm-3 col-md-2">
-  <div class="item item--square item--background item--contain $background">
+  <div class="item item--square item--background item--contain $background" title="{$data['name']}">
   </div>
 </section>
 EOC;
