@@ -30,33 +30,6 @@
             "return_format": "id"
         },
         {
-            "key": "field_58400c0fbb378",
-            "label": "Other clients",
-            "name": "other_clients",
-            "type": "relationship",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "client"
-            ],
-            "taxonomy": [],
-            "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
-            ],
-            "elements": "",
-            "min": "",
-            "max": "",
-            "return_format": "id"
-        },
-        {
             "key": "field_58bfe7ff129e0",
             "label": "Client logos",
             "name": "client_logos",
@@ -138,5 +111,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1488971861
+    "modified": 1488972596
 }
