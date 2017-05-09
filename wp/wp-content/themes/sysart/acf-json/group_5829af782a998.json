@@ -63,6 +63,22 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
+                },
+                {
+                    "key": "field_591161260f306",
+                    "label": "URL",
+                    "name": "url",
+                    "type": "url",
+                    "instructions": "URL of the blog post you want this benefit to link to",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
                 }
             ]
         },
@@ -103,5 +119,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484311361
+    "modified": 1494322876
 }
