@@ -52,5 +52,5 @@ get_header();
     <?php echo $featured_blog_list; ?>
   </div>
 </div>
-testing...
+
 <?php get_footer(); ?>
