@@ -17,5 +17,4 @@ cd $TEMPDIR/wp
 git init
 git add -A
 git commit -m 'Add files'
-# TODO: change this to staging git
-git push --force git@git.wpengine.com:production/sysart201705.git master
+git push --force git@git.wpengine.com:staging/sysart201705.git master
