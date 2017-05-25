@@ -32,4 +32,10 @@ rm -rf $WP_DIR/wp-content/uploads
 cp -r $TEMPDIR/wp-content/uploads $WP_DIR/wp-content/uploads
 
 echo "--- Add DB haxes ---"
-docker exec $MYSQL_CONTAINER mysql -proot sysart_wp -e "UPDATE wp_options SET option_value = 'http://localhost:8080' WHERE option_name = 'home' OR option_name = 'siteurl';"
+docker exec $MYSQL_CONTAINER mysql -proot sysart_wp -e "
+  UPDATE wp_options SET option_value = 'http://localhost:8080' WHERE option_name = 'home' OR option_name = 'siteurl';
+  INSERT INTO wp_users (user_login, user_pass, user_nicename, display_name) VALUES ('admin', md5('admin'), 'admin', 'admin');
+  SET @user_id = LAST_INSERT_ID();
+  INSERT INTO wp_usermeta (user_id, meta_key, meta_value) VALUES (@user_id, 'wp_capabilities', 'a:1:{s:13:\"administrator\";b:1;}');
+  INSERT INTO wp_usermeta (user_id, meta_key, meta_value) VALUES (@user_id, 'wp_user_level', '10');
+"
