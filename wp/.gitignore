@@ -58,8 +58,8 @@ wp-content/mysql.sql
 /wp-admin
 /wp-includes
 /wp-content/index.php
-/wp-content/themes/twentyten
-/wp-content/themes/index.php
+/wp-content/themes/*
+!/wp-content/themes/sysart
 /wp-content/plugins/index.php
 
 # large/disallowed file types

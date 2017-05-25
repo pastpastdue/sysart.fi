@@ -30,3 +30,6 @@ docker exec -i $MYSQL_CONTAINER mysql -proot sysart_wp < $TEMPDIR/wp-content/mys
 echo "--- Importing uploads ---"
 rm -rf $WP_DIR/wp-content/uploads
 cp -r $TEMPDIR/wp-content/uploads $WP_DIR/wp-content/uploads
+
+echo "--- Add DB haxes ---"
+docker exec $MYSQL_CONTAINER mysql -proot sysart_wp -e "UPDATE wp_options SET option_value = 'http://localhost:8080' WHERE option_name = 'home' OR option_name = 'siteurl';"
