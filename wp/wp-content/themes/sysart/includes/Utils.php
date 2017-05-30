@@ -243,4 +243,36 @@ class Utils {
 
     return $posts;
   }
+
+  public static function getGuideBlock() {
+    $guide_visibility = get_field('guide_block_visibility');
+    $guide_block_content_order = get_field('guide_block_content_order');
+    $guide_title = get_field('guide_title');
+    $guide_subtitle = get_field('guide_subtitle');
+    $guide_description = get_field('guide_description');
+    $guide_image = get_field('guide_image');
+    $guide_download_button_text = get_field('guide_download_button_text');
+    $guide_download_link = get_field('guide_download_link');
+
+    if ($guide_visibility
+        && $guide_block_content_order
+        && $guide_title
+        && $guide_subtitle
+        && $guide_description
+        && $guide_image
+        && $guide_download_button_text
+        && $guide_download_link) {
+      $block = new DownloadableGuideBlock(
+          $guide_block_content_order,
+          $guide_title,
+          $guide_subtitle,
+          $guide_description,
+          $guide_image,
+          $guide_download_button_text,
+          $guide_download_link);
+      return $block->__toString();
+    }
+
+    return "";
+  }
 }
