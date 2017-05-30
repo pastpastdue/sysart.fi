@@ -8,6 +8,7 @@ $jumbotron_bg = StyleInjector::addBackground(get_field('hero_image'));
 $service_list = new ServicesList(get_field('services'));
 $featured_clients_list = new FeaturedClientsList(get_field('clients'));
 $featured_blog_list = new BlogList(get_field('featured_blogs'));
+$downloadable_guide_block = Utils::getGuideBlock();
 
 get_header();
 ?>
@@ -52,5 +53,8 @@ get_header();
     <?php echo $featured_blog_list; ?>
   </div>
 </div>
+<?php if ($downloadable_guide_block): ?>
+  <?php echo $downloadable_guide_block; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>

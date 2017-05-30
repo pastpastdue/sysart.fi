@@ -8,6 +8,7 @@ $other_clients_list = Utils::getMinimalClientList();
 $team_list = new PeopleList(get_field('employees'), true);
 $hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
 $team_title = get_field('team_title');
+$downloadable_guide_block = Utils::getGuideBlock();
 
 get_header();
 ?>
@@ -32,4 +33,7 @@ get_header();
 </div>
 <?php echo new AddThis(); ?>
 <?php echo $other_clients_list; ?>
+<?php if ($downloadable_guide_block): ?>
+  <?php echo $downloadable_guide_block; ?>
+<?php endif; ?>
 <?php get_footer(); ?>

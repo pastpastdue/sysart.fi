@@ -12,6 +12,7 @@ $employees = get_posts(array(
 ));
 
 $people_list = new PeopleList($employees);
+$downloadable_guide_block = Utils::getGuideBlock();
 
 get_header();
 ?>
@@ -21,4 +22,7 @@ get_header();
   </div>
 </div>
 <?php echo $people_list; ?>
+<?php if ($downloadable_guide_block): ?>
+  <?php echo $downloadable_guide_block; ?>
+<?php endif; ?>
 <?php get_footer(); ?>

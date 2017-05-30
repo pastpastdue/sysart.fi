@@ -8,6 +8,7 @@ the_post();
 $process = new Process(get_field('process'));
 $reference_window = new ReferenceView(get_field('reference'), get_field('reference_title'), get_field('reference_link'));
 $other_services_list = new ServicesList(get_field('other_services'));
+$downloadable_guide_block = Utils::getGuideBlock();
 
 $hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
 
@@ -48,4 +49,7 @@ get_header();
   </div>
 </div>
 <?php echo $other_services_list; ?>
+<?php if ($downloadable_guide_block): ?>
+  <?php echo $downloadable_guide_block; ?>
+<?php endif; ?>
 <?php get_footer(); ?>

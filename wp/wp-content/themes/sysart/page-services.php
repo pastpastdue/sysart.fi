@@ -6,6 +6,7 @@
 the_post();
 $hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
 $service_list = new ServicesList(get_field('services'));
+$downloadable_guide_block = Utils::getGuideBlock();
 
 get_header();
 
@@ -21,4 +22,7 @@ get_header();
   </div>
 </div>
 <?php echo $service_list; ?>
+<?php if ($downloadable_guide_block): ?>
+  <?php echo $downloadable_guide_block; ?>
+<?php endif; ?>
 <?php get_footer(); ?>

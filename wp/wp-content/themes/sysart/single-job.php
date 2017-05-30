@@ -1,6 +1,7 @@
 <?php
 get_header();
 the_post();
+$downloadable_guide_block = Utils::getGuideBlock();
 ?>
 <div class="hero block">
   <div class="block__content block--light">
@@ -14,4 +15,7 @@ the_post();
   </div>
 </div>
 <?php echo new AddThis(); ?>
+<?php if ($downloadable_guide_block): ?>
+  <?php echo $downloadable_guide_block; ?>
+<?php endif; ?>
 <?php get_footer(); ?>

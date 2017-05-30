@@ -12,6 +12,7 @@ $jobs_list = new JobsList($jobs);
 $hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
 
 $featured_blog_list = new BlogList(get_field('featured_blogs'));
+$downloadable_guide_block = Utils::getGuideBlock();
 
 get_header();
 ?>
@@ -58,4 +59,7 @@ get_header();
     </div>
   </div>
 <?php }; ?>
+<?php if ($downloadable_guide_block): ?>
+  <?php echo $downloadable_guide_block; ?>
+<?php endif; ?>
 <?php get_footer(); ?>
