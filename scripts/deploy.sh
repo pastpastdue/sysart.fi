@@ -15,8 +15,8 @@ npm run build
 cp -r $WP_DIR $TEMPDIR
 cd $TEMPDIR/wp
 git init
-git config --set user.name "Sysart"
-git config --set uesr.email "sysart@sysart.fi"
+git config user.name "Sysart"
+git config user.email "sysart@sysart.fi"
 git add -A
 git commit -m 'Add files'
 git push --force git@git.wpengine.com:staging/sysart201705.git master
