@@ -9,6 +9,7 @@ the_post();
 $footer = get_field('footer', get_option('page_on_front'));
 
 $people_list = new PeopleList(get_field('employees'));
+$downloadable_guide_block = Utils::getGuideBlock();
 
 get_header();
 ?>
@@ -57,4 +58,7 @@ get_header();
     </script>
   </div>
 </div>
+<?php if ($downloadable_guide_block): ?>
+  <?php echo $downloadable_guide_block; ?>
+<?php endif; ?>
 <?php get_footer(); ?>

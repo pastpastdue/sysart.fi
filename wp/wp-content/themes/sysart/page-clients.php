@@ -6,6 +6,7 @@ $hero_bg = StyleInjector::addBackground(get_post_thumbnail_id());
 
 $clients_list = new ClientsList(get_field('featured_clients'));
 $other_clients_list = new OtherClientsList(get_field('client_logos'));
+$downloadable_guide_block = Utils::getGuideBlock();
 
 get_header();
 
@@ -30,4 +31,7 @@ the_post();
   </div>
 </div>
 <?php echo $other_clients_list; ?>
+<?php if ($downloadable_guide_block): ?>
+  <?php echo $downloadable_guide_block; ?>
+<?php endif; ?>
 <?php get_footer(); ?>
