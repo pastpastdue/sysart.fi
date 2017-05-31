@@ -1,14 +1,13 @@
 <?php
 class DownloadableGuideBlock {
 
-    public function __construct($content_order, $title, $subtitle, $desc, $image_id, $button_text, $url) {
+    public function __construct($content_order, $title, $subtitle, $desc, $image_id, $button_html) {
         $this->content_order = $content_order;
         $this->title = $title;
         $this->subtitle = $subtitle;
         $this->desc = $desc;
         $this->image_id = $image_id;
-        $this->button_text = $button_text;
-        $this->url = $url;
+        $this->button_html = $button_html;
         $img = wp_get_attachment_image($this->image_id, 'large', false, array('class' => 'image image--responsive'));
         $image_first_styles = $this->content_order == 'image_first' ? 'downloadable-guide-image-first' : '';
 
@@ -23,9 +22,7 @@ class DownloadableGuideBlock {
         <h1 class="title title--medium">{$this->subtitle}</h1>
         <p>{$this->desc}</p>
         <div>
-            <a href="{$this->url}" class="button">
-                {$this->button_text}
-            </a>
+            {$this->button_html}
         </div>
     </div>
 </div>

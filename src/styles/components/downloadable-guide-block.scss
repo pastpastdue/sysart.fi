@@ -2,8 +2,6 @@
 
 .downloadable-guide {
 
-  padding: 2.5rem 7rem;
-
   .downloadable-guide--image {
     padding: 0 2.5em;
 
@@ -47,6 +45,8 @@
   }
 
   @include use-up('sm') {
+    padding: 2.5rem 7rem;
+
     .item--text {
       @include item--square;
 

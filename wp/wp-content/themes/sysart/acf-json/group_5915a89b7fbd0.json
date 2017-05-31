@@ -132,10 +132,10 @@
             "mime_types": ""
         },
         {
-            "key": "field_5915aab5ee38d",
-            "label": "Guide Download Button Text",
-            "name": "guide_download_button_text",
-            "type": "text",
+            "key": "field_5915aad7ee38e",
+            "label": "Guide Download Button Code",
+            "name": "guide_download_button",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -154,33 +154,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5915aad7ee38e",
-            "label": "Guide Download Link",
-            "name": "guide_download_link",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5915ae82db7d7",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
             "key": "field_5915ad49db7d6",
@@ -232,5 +208,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1496134294
+    "modified": 1496210732
 }
