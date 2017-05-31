@@ -4,6 +4,10 @@ node_js:
 # install: true
 script: echo "ok!"
 
+addons:
+  ssh_known_hosts:
+    - git.wpengine.com
+
 deploy:
   skip_cleanup: true
   provider: script
