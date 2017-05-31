@@ -1,7 +1,5 @@
-language: php
-php:
-  - '7.1'
-script: vendor/bin/atoum
+install: true
+script: echo "ok!"
 
 deploy:
   provider: script
