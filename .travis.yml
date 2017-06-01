@@ -1,16 +1,15 @@
 language: node_js
 node_js:
-  - "6"
-# install: true
+- '6'
 script: echo "ok!"
-
 addons:
   ssh_known_hosts:
-    - git.wpengine.com
-
+  - git.wpengine.com
 deploy:
   skip_cleanup: true
   provider: script
   script: scripts/deploy.sh
   on:
     branch: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_fad0a788fb39_key -iv $encrypted_fad0a788fb39_iv -in config/travis.enc -out config/travis -d

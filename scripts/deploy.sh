@@ -19,4 +19,5 @@ git config user.name "Sysart"
 git config user.email "sysart@sysart.fi"
 git add -A
 git commit -m 'Add files'
+ssh-add $ROOT_DIR/travis
 git push --force git@git.wpengine.com:staging/sysart201705.git master
