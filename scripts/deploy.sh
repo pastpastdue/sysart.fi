@@ -12,9 +12,8 @@ trap "rm -rf $TEMPDIR" EXIT
 cd $ROOT_DIR
 npm run build
 
-ls $ROOT_DIR/travis
 eval `ssh-agent -s`
-ssh-add $ROOT_DIR/travis
+ssh-add $ROOT_DIR/config/travis
 
 cp -r $WP_DIR $TEMPDIR
 cd $TEMPDIR/wp
