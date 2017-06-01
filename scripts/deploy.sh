@@ -13,6 +13,7 @@ cd $ROOT_DIR
 npm run build
 
 eval `ssh-agent -s`
+chmod 600 $ROOT_DIR/config/travis
 ssh-add $ROOT_DIR/config/travis
 
 cp -r $WP_DIR $TEMPDIR
