@@ -1,5 +1,6 @@
 <?php
 define('BUILD_STAMP', filemtime(__DIR__ . '/styles/styles.min.css'));
+define('WP_CONTENT_URL', '/wp-content');
 
 foreach (glob(__DIR__ . '/functions/*.php') as $file) {
   include $file;
