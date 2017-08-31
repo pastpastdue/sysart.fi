@@ -22,7 +22,7 @@ get_header();
   <div class="block__content">
     <div class="row">
       <?php foreach ($footer as $element): if ($element['acf_fc_layout'] === 'address'): ?>
-        <section class="col-md-4">
+        <section class="col-sm-6 col-lg-3">
           <div class="item item--center">
             <div class="item__content">
               <?php echo wp_get_attachment_image($element['image'], 'thumbnail', false, array('class' => 'item__image')); ?>

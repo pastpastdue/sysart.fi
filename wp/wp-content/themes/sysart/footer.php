@@ -1,11 +1,15 @@
 <?php
 $footer = get_field('footer', get_option('page_on_front'));
+$elements = array_filter($footer, function ($e) {
+  return $e['acf_fc_layout'] != "address" || $e['show_on_footer'];
+});
+
 ?>
     </div><? // close wrapper ?>
     <footer class="footer">
       <div id="footer-wrapper">
         <div class="block row no-gutter">
-          <?php foreach ($footer as $element): ?>
+          <?php foreach ($elements as $element): ?>
             <div class="item col-sm-3">
               <div class="item__content">
                 <?php if ($element['acf_fc_layout'] == 'address'): ?>
