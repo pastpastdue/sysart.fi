@@ -24,6 +24,9 @@ get_header();
     <?php the_content(); ?>
   </div>
 </div>
+<?php if ($downloadable_guide_block): ?>
+  <?php echo $downloadable_guide_block; ?>
+<?php endif; ?>
 <?php echo $process; ?>
 <?php echo $reference_window; ?>
 <?php if (get_field('hubspot_portal_id') && get_field('hubspot_form_id')): ?>
@@ -49,7 +52,5 @@ get_header();
   </div>
 </div>
 <?php echo $other_services_list; ?>
-<?php if ($downloadable_guide_block): ?>
-  <?php echo $downloadable_guide_block; ?>
-<?php endif; ?>
+
 <?php get_footer(); ?>

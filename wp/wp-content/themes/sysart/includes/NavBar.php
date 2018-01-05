@@ -11,7 +11,7 @@ class NavBar {
 
     $home_link = get_site_url();
     $frontpage = get_post(get_option('page_on_front'));
-    $logo = wp_get_attachment_image(get_field('logo', $frontpage), thumbnail, false, array('class' => 'image image--responsive'));
+    $logo = wp_get_attachment_image(get_field('logo', $frontpage), 'thumbnail', false, array('class' => 'image image--responsive'));
 
     $items = wp_nav_menu(array(
       'echo' => false,

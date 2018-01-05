@@ -2,7 +2,7 @@ version: '2'
 
 services:
   wordpress:
-    build: .
+    image: wordpress:latest
     ports:
       - 8080:80
     volumes:

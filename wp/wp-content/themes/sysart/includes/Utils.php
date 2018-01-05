@@ -255,8 +255,7 @@ class Utils {
 
     if ($guide_visibility
         && $guide_block_content_order
-        && $guide_title
-        && $guide_subtitle
+        && ($guide_title || $guide_subtitle) 
         && $guide_description
         && $guide_image
         && $guide_download_button) {
