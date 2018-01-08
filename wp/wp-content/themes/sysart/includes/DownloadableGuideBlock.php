@@ -29,7 +29,7 @@ class DownloadableGuideBlock {
 EOC;
 
         $this->image_column = <<<EOC
-<div class="$text_first_responsive_classes item downloadable-guide--image">
+<div class="$text_first_responsive_classes item row downloadable-guide--image">
    <div class="responsive-container">
     <div class="dummy"></div>
 

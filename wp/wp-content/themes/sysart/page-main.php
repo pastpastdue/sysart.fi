@@ -25,6 +25,9 @@ get_header();
   </div>
 </div>
 <?php echo $service_list; ?>
+<?php if ($downloadable_guide_block): ?>
+      <?php echo $downloadable_guide_block; ?>
+<?php endif; ?>
 <div class="block block--large">
   <div class="block__content child-margins">
     <h2 class="title title--highlight"><?php the_field('block_title'); ?></h2>
@@ -53,8 +56,5 @@ get_header();
     <?php echo $featured_blog_list; ?>
   </div>
 </div>
-<?php if ($downloadable_guide_block): ?>
-  <?php echo $downloadable_guide_block; ?>
-<?php endif; ?>
 
 <?php get_footer(); ?>
