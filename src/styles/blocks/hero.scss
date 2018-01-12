@@ -4,16 +4,35 @@
 .hero {
   width: 100%;
   padding-bottom: percentage(1/3);
-  background-color: #EE7326;
-  animation-name: colorSwap;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; 
+  &.custom-hero {
+    background-color: #EE7326;
+    animation-name: colorSwap;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+  }
+
 
   .cta_button {
     margin: 20px;
     background-color: #fff !important;
     color: #fff !important;
+
+    .hero-button {
+      font-weight: 400;
+      color: #f58242;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .bait {
+        font-size: .6em;
+      }
+      .subject {
+        color: #000;
+        margin: 8px;
+      }
+    }
   }
 
   @include use-down('sm') {
