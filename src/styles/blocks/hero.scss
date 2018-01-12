@@ -26,11 +26,18 @@
       justify-content: center;
 
       .bait {
-        font-size: .6em;
+        font-size: .8rem;
+        @include use-down('sm') {
+          font-size: .5rem;
+        }
       }
       .subject {
+        font-size: 1.5rem;
         color: #000;
-        margin: 8px;
+        margin: 8px 0;
+        @include use-down('sm') {
+          font-size: 1.2rem;
+        }
       }
     }
   }
