@@ -15,6 +15,35 @@ get_header();
 <div class="hero hero--large block <?php echo $jumbotron_bg; ?>">
   <div class="block__content">
     <h1 class="hero__title"><?php the_field('hero_text'); ?></h1>
+    
+
+    <div>
+      <!--HubSpot Call-to-Action Code -->
+      <span class="hs-cta-wrapper" 
+      id="hs-cta-wrapper-db68a8b1-774b-45b4-b56b-3877acf21cc7">
+        <span class="hs-cta-node hs-cta-db68a8b1-774b-45b4-b56b-3877acf21cc7" 
+        id="hs-cta-db68a8b1-774b-45b4-b56b-3877acf21cc7" 
+        data-hs-drop="true" 
+        style="visibility: visible;">
+          <a id="cta_button_2685480_5b580352-34bd-4934-9429-e357eeb8f296" 
+          class="cta_button button" 
+          href="https://soundcloud.com/sysart" 
+          style="" 
+          cta_dest_link="http://tietopankki.sysart.fi/lataa-minimoi-riskit-yrityspaattajan-opas-ohjelmistohankintoihi" 
+          title="Lataa opas">
+            <span style="font-weight: 400; color: #f58242;">
+              Kuuntele podcast
+            </span>
+          </a>
+        </span>
+        <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script>
+        <script type="text/javascript"> hbspt.cta.load(2685480, 'db68a8b1-774b-45b4-b56b-3877acf21cc7', {}); </script>
+      </span><!-- end HubSpot Call-to-Action Code -->
+    </div>
+
+
+
+
   </div>
 </div>
 <div class="block block--large">
