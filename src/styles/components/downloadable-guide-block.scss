@@ -3,8 +3,8 @@
 .downloadable-guide {
 
   .downloadable-guide--image {
-    padding: 0 2.5em;
-
+    //padding: 0 2.5em;
+    padding: 0;
     img {
       margin: 0 auto;
       width: 100%;
@@ -45,7 +45,7 @@
   }
 
   @include use-up('sm') {
-    padding: 2.5rem 7rem;
+    padding: 0 7rem;
 
     .item--text {
       @include item--square;
