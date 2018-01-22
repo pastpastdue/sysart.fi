@@ -19,6 +19,15 @@ get_header();
 <div class="hero block <?php echo $hero_bg; ?>">
   <div class="block__content">
     <h1 class="hero__title"><?php the_title(); ?></h1>
+    <a
+          class="cta_button button" 
+          href="https://hubs.ly/H09LkxZ0" 
+          title="Lataa opas">
+            <div class="hero-button">
+              <span class="bait">Kuuntele podcast</span>
+              <span class="subject">PALKKAMALLI</span>
+            </div>
+    </a>
   </div>
 </div>
 <div class="block">
