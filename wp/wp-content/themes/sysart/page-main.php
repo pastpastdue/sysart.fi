@@ -23,7 +23,7 @@ get_header();
       <span class="hs-cta-node hs-cta-2b60b2e4-689b-4584-a6c3-fefa54c30562" id="hs-cta-2b60b2e4-689b-4584-a6c3-fefa54c30562">
       <!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]-->
         <a href="https://cta-redirect.hubspot.com/cta/redirect/2685480/2b60b2e4-689b-4584-a6c3-fefa54c30562" >
-        <img class="hs-cta-img" id="hs-cta-img-2b60b2e4-689b-4584-a6c3-fefa54c30562" style="border-width:0px;" height="159" width="501" src="https://no-cache.hubspot.com/cta/default/2685480/2b60b2e4-689b-4584-a6c3-fefa54c30562.png"  alt="Sysart Podcast"/>
+        <img class="hs-cta-img" id="hs-cta-img-2b60b2e4-689b-4584-a6c3-fefa54c30562" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/2685480/2b60b2e4-689b-4584-a6c3-fefa54c30562.png"  alt="Sysart Podcast"/>
         </a>
       </span>
       <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script>
