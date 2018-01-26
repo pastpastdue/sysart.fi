@@ -17,17 +17,18 @@ get_header();
     <h1 class="hero__title"><?php the_field('hero_text'); ?></h1>
     
 
-    <div>
-      <!--HubSpot Call-to-Action Code -->
-          <a
-          class="cta_button button" 
-          href="http://blogi.sysart.fi/podcast-sysartin-suuri-palkkamallikeskustelu" 
-          title="Lataa opas">
-            <div class="hero-button">
-              <span class="bait">Kuuntele podcast</span>
-              <span class="subject">PALKKAMALLI</span>
-            </div>
-          </a>
+    <div class="hub-link">
+    <!--HubSpot Call-to-Action Code -->
+    <span class="hs-cta-wrapper" id="hs-cta-wrapper-2b60b2e4-689b-4584-a6c3-fefa54c30562">
+      <span class="hs-cta-node hs-cta-2b60b2e4-689b-4584-a6c3-fefa54c30562" id="hs-cta-2b60b2e4-689b-4584-a6c3-fefa54c30562">
+      <!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]-->
+        <a href="https://cta-redirect.hubspot.com/cta/redirect/2685480/2b60b2e4-689b-4584-a6c3-fefa54c30562" >
+        <img class="hs-cta-img" id="hs-cta-img-2b60b2e4-689b-4584-a6c3-fefa54c30562" style="border-width:0px;" height="159" width="501" src="https://no-cache.hubspot.com/cta/default/2685480/2b60b2e4-689b-4584-a6c3-fefa54c30562.png"  alt="Sysart Podcast"/>
+        </a>
+      </span>
+      <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script>
+      <script type="text/javascript"> hbspt.cta.load(2685480, '2b60b2e4-689b-4584-a6c3-fefa54c30562', {}); </script>
+    </span><!-- end HubSpot Call-to-Action Code -->
     </div>
 
 

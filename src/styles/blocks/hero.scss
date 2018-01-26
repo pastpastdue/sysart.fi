@@ -12,6 +12,21 @@
     animation-direction: alternate; 
   }
 
+  .hub-link {
+    margin: 20px 0;
+    .cta_button {
+      margin: 20px;
+      background-color: transparent !important;
+      img{
+        height: 80px;
+        width: auto;
+        @include use-down('sm') {
+          height: 50px;
+        }
+      }
+    }
+  }
+
 
   .cta_button {
     margin: 20px;
