@@ -67,8 +67,13 @@ get_header();
   </div>
 </div>
 <div class="block block--full-width block--condensed-top">
-  <div class="block__content block__content--condensed-bottom">
+  <div class="block__content">
     <?php echo $featured_blog_list; ?>
+  </div>
+  <div class="block__content ">
+    <div>
+      <a href="https://blogi.sysart.fi" class="button">Katso kaikki</a>
+    </div>
   </div>
 </div>
 
