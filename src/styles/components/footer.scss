@@ -16,4 +16,17 @@
   .image {
     max-height: 200px;
   }
+
+  &__policies {
+    font-weight: 200;
+    
+    a {
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
 }

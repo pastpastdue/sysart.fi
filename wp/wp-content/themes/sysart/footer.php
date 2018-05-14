@@ -3,6 +3,8 @@ $footer = get_field('footer', get_option('page_on_front'));
 $elements = array_filter($footer, function ($e) {
   return $e['acf_fc_layout'] != "address" || $e['show_on_footer'];
 });
+$registry_policy_pdf = wp_get_attachment_url( 1608 );
+$privacy_policy_pdf = wp_get_attachment_url( 1607 );
 
 ?>
     </div><? // close wrapper ?>
@@ -22,7 +24,8 @@ $elements = array_filter($footer, function ($e) {
             </div>
           <?php endforeach; ?>
           <div class="text-center copyright-info col-xs-12">
-            <p class="copyright">&copy; Sysart Oy 2016</p>
+            <p class="copyright">&copy; Sysart Oy <?php echo date('Y'); ?></p>
+            <p class="footer__policies"><a href="<?php echo $registry_policy_pdf; ?>" title="Rekisteriseloste">Rekisteri-</a> ja <a href="<?php echo $privacy_policy_pdf; ?>" title="Tietosuojaseloste">tietosuojaseloste</a></p>
           </div>
         </div>
       </div>
